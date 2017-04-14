@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2016/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: ustcauthoryear.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bib/tex.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+c   knuth  donald e
+c   mittelbach  frank   zz2004   goossens  michel   braams  johannes   carlisle  david
+c   knuth  donald e
+You've used 3 entries,
+            3913 wiz_defined-function locations,
+            813 strings with 6237 characters,
+and the built_in function-call counts, 4300 in all, are:
+= -- 138
+> -- 509
+< -- 311
++ -- 172
+- -- 18
+* -- 99
+:= -- 537
+add.period$ -- 14
+call.type$ -- 3
+change.case$ -- 13
+chr.to.int$ -- 158
+cite$ -- 6
+duplicate$ -- 367
+empty$ -- 133
+format.name$ -- 20
+if$ -- 917
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 2
+newline$ -- 29
+num.names$ -- 12
+pop$ -- 177
+preamble$ -- 1
+purify$ -- 12
+quote$ -- 0
+skip$ -- 360
+stack$ -- 0
+substring$ -- 181
+swap$ -- 5
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 3
+type$ -- 23
+warning$ -- 0
+while$ -- 16
+width$ -- 0
+write$ -- 56
