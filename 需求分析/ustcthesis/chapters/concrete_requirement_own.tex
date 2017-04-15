@@ -1,56 +1,159 @@
 \chapter{具体需求}
-  \subsection{001 成绩统计}
+  \subsection{001.1 成绩录入}
+    \subsubsection{介绍}
+    成绩输入仅供教师端使用。可以用于登记考试/作业等等的成绩。
     \subsubsection{输入}
+    输入时首先要新建条目（某次考试或者作业等），之后再相应的输入各学生成绩数据。输入有以下几种方式：
+    \begin{itemize}
+      \item 从文件中读取输入，系统支持从文件中导入成绩，具体导入格式如下所示
+      \begin{lstlisting}[caption=文件导入成绩示例, label={code:import_grade_from_file}]
+      #学号，成绩以','分隔，每行一条记录。
+      #例：
+      张三，96
+      李四，90
+      \end{lstlisting}
+      \item 通过客户端逐条进行输入
+      \item 导入作业批改系统自动生成的成绩
+    \end{itemize}
+    输入数据要求如下：
+    \begin{itemize}
+      \item 学号必须是登记注册为本课程的学生的有效学号，否则进行报错。
+      \item 成绩为整数，如果含有小数按四舍五入进行舍入。
+      \item 默认成绩的范围为[0,100]，超过此范围进行警告并且自动取最接近的可行值。可以通过自定义设置进行调整。
+    \end{itemize}
     \subsubsection{处理}
+    首先通过按照默认规则和用户自定义的规则生成相关的约束对于输入数据的有效性进行验证。如果含有出错首先按照默认处理逻辑处理并且给出警告，如果不存在适配的处理流程则报错并要求用户进行修改。如果所有验证有效，存入相应的后台数据库中。
     \subsubsection{输出}
+    数据最终存入后端的数据库中。
+
+  \subsection{001.2 成绩查询}
+    \subsubsection{介绍}
+    成绩查询用于查询已经录入的成绩。学生可以查到本人相应课程的所有成绩。老师可以查到相应班级所有同学的成绩。教学管理人员可以查询自己所负责所有学生的相应成绩。
+    \subsubsection{输入}
+    不同用户的输入如下：
+    \begin{center}\begin{description}
+      \item[学生] 学生的输入为选择响应的课程和某次考试/作业/...
+      \item[老师] 老师可以选择相应的班级和某次考试/作业/...
+      \item[教秘] 教秘可以可以选择自己所负责范围内的所有学生和课程的相应信息
+    \end{description}\end{center}
+    \subsubsection{处理}
+    消息传递给后端数据库后检查相应的权限，如果权限符合则取出相应的数据传回。
+    \subsubsection{输出}
+    接受后端数据库传回的数据并显示在客户端上。
+
+  \subsection{001.2 成绩统计和调整}
+    \subsubsection{介绍}
+    成绩统计功能教学管理人员与老师都拥有，成绩调整只有老师有相应的权限。成绩统计可用于老师和教学管理人员了解教学情况以及学生的学业状况。成绩调整可以供老师修订成绩同时也可以方便按照一定的规则对于成绩进行统一调整使得成绩更有一般性并能更好的体现学生的水平。预置部分功能如下：
+    \begin{description}
+      \item[统计] 可以进行求和、平均、排序等等基本操作
+      \item[修改] 可以按照预置或者自定义的一些规则对成绩进行统一调整，如正态话等等
+    \end{description}
+    \subsubsection{输入}
+    输入选择操作成绩的对象。对象的约束包括学生和哪次考试两方面。同时需要指定相应的数据操作。
+    \subsubsection{处理}
+    根据输入操作对象，首先检查用户是否具有相应的权限，然后从后台数据库中取出相应的数据。按照输入中指定的操作进行处理。输出时询问用户是否要同时更新数据库中内容。
+    \subsubsection{输出}
+    在客户端中显示结果，同时根据操作类型和用户的选择决定是否需要更新原数据库。
+
 
   \subsection{002.1 资源上传}
-    \subsubsection{输入}
-    \subsubsection{处理}
-    \subsubsection{输出}
+    \subsubsection{介绍}
 
-  \subsection{002.2 资源下载}
     \subsubsection{输入}
+    输入给定指定资源来源以及上传目的地，源有以下选项：
+    \begin{itemize}
+      \item 从本地进行上传
+      \item 给出相应的下载链接进行离线下载
+      \item 从别人共享文件处进行同步
+    \end{itemize}
+    目的地有以下选项：
+    \begin{itemize}
+      \item 私人拥有的库，但是可以设置是否他人可见
+      \item 共享资源库中，需要检查权限，无权限者需要经过管理员审核。默认上传之后会对所有相关人员广播通知。共享资源库可以由个人建立之后邀请相关人员加入。每门课程建立之后会生成相应课程资源区，老师助教拥有权限并且加入相应的学生。同时各行政院系等也会有相应打资源共享区。
+    \end{itemize}
+    同时还要给出资源相应的权限设置如是否共享以及是否通知他人等。
     \subsubsection{处理}
-    \subsubsection{输出}
+    对于给定的输入，首先判断对于目的地是否具有相应的权限，如无报错，如果需要申请先进行请求。有或者请求通过则继续。\\
+    然后检查相应的资源是否有效合法。如验证有效则快速比较后台数据库是否已经存在相应的数据，如不存在则存储，否则只建立相应的链接。\\
 
-  \subsection{002.3 资源修订}
-    \subsubsection{输入}
-    \subsubsection{处理}
     \subsubsection{输出}
+    将数据实际存储入相应服务器，同时反馈操作结果。
+
+  \subsection{002.2 资源下载与浏览}
+    \subsubsection{介绍}
+
+    \subsubsection{输入}
+    请求的资源以及请求的操作
+    \subsubsection{处理}
+    检查响应的请求是否具有相关的权限，如果是下载则后台开启传输。如果是浏览则尝试进行打开。暂时支持的文件类型如下：
+    \begin{itemize}
+      \item
+    \end{itemize}
+    \subsubsection{输出}
+    下载存储至本地，浏览输出至相应的客户端。
 
   \subsection{003.1 新建日程}
-    \subsubsection{输入}
-    \subsubsection{处理}
-    \subsubsection{输出}
+    \subsubsection{介绍}
 
-  \subsection{003.2 日程提醒}
     \subsubsection{输入}
+    新建日程主要可以通过以下几种方式：
+    \begin{itemize}
+      \item 直接由用户输入各项参数生成新的日程提醒
+      \item 通过作业实验以及考试等的通知安排自动生成日程
+      \item 用户直接复制收到的通知等文本，提取其中的信息自动生成相关的日程
+    \end{itemize}
+    每项日程有以下参数构成：
+    \begin{itemize}
+      \item 事件开始时间和结束时间，如果开始时间和结束时间相同则将此时间视作截止时间
+      \item 事件的地点
+      \item 事件简要说明
+      \item 事件的详细说明，可链接至相应备忘/作业/实验/...处
+      \item 提醒时间，可自定义多个，缺省在开始前一天以及前一个小时进行提醒
+      \item 其他自定义标签
+    \end{itemize}
     \subsubsection{处理}
+    处理流程如下：
+    \begin{itemize}
+      \item 首先对输入进行解析，从中提取出相应的各项参数信息
+      \item 对信息进行分析，检查是否有不合法之处，如当前时间已超出截止时间，该时间段已经有其他安排等并给出相应的提醒
+      \item 根据信息生成日程安排存储至后端数据库并生成相应的提醒
+    \end{itemize}
     \subsubsection{输出}
+    输出一是存储至本地数据库中同时同步至远端，另外反馈是否成功。
+
+  \subsection{003.2 日程显示与提醒}
+    \subsubsection{介绍}
+
+    \subsubsection{输入}
+    数据库中现存的日程数据。
+    \subsubsection{处理}
+    将数据库中存储的日程信息获取排序，按照事件进行排布并输出至客户端。同时用截止日期和当前时间自动计算倒计时。同时检查是否有需要进行提醒的事项
+    \subsubsection{输出}
+    输出至客户端相应页面，同时可调用铃声系统通知等进行提醒。
 
   \subsection{004.1 新建主题}
+    \subsubsection{介绍}
+
     \subsubsection{输入}
+    新建话题的主题以及简单描述。选择相应的讨论区。
     \subsubsection{处理}
+    检查是否具有相关权限并简单判断内容是否合法。同时判断是否需要广播该消息以及广播对象。
     \subsubsection{输出}
+    存储至后台数据库中。
 
   \subsection{004.2 回复}
-    \subsubsection{输入}
-    \subsubsection{处理}
-    \subsubsection{输出}
+    \subsubsection{介绍}
 
-  \subsection{005 课程排布}
     \subsubsection{输入}
+    回复内容
     \subsubsection{处理}
-    \subsubsection{输出}
 
-  \subsection{006 学生学习情况统计}
-    \subsubsection{输入}
-    \subsubsection{处理}
     \subsubsection{输出}
+    存储至后端数据库
 
   \subsection{007.1 新建博文}
     \subsubsection{输入}
+    新建博文的主题以及内容
     \subsubsection{处理}
     \subsubsection{输出}
 
@@ -58,3 +161,11 @@
     \subsubsection{输入}
     \subsubsection{处理}
     \subsubsection{输出}
+
+  \subsection{005 课程排布}
+    \subsubsection{输入}
+    当前已知的所有预计开设课程以及选课学生信息。
+    \subsubsection{处理}
+    调用相关算法生成满足一下条件的课表：
+    \subsubsection{输出}
+    生成的课表信息

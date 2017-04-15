@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.15)  15 APR 2017 17:41
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.15)  15 APR 2017 23:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2070,7 +2070,11 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 [1
 
 
-])
+]
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[2])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -2078,7 +2082,7 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[2] (./main.lof)
+[3] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -2086,7 +2090,7 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[3
+[4
 
 ] (./main.lot)
 \tf@lot=\write7
@@ -2096,7 +2100,7 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[4
+[5
 
 ] (./chapters/intro.tex
 第1章
@@ -2104,7 +2108,7 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[5
+[6
 
 
 ]
@@ -2113,121 +2117,24 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[6
+[7
 
 ]
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[7]) (./chapters/concrete_requirement.tex
+[8]) (./chapters/concrete_requirement_own.tex
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[8]
+[9]
 第3章
 
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 2.
 
-
-[9
-
-]
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[10]
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[11]
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[12]
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[13]
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[14]) (./chapters/design_constraint.tex
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[15]
-第4章
-) (./chapters/quality_characteristics.tex
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[16
-
-]
-第5章
-) (./chapters/others.tex
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[17
-
-]
-第6章
-) (./chapters/dependency.tex
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[18
-
-]
-第7章
-) (./chapters/importance_of_requirements.tex
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[19
-
-]
-第8章
-) (./chapters/to_be_determined.tex
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[20
-
-]
-第9章
-
-Overfull \hbox (23.8567pt too wide) in paragraph at lines 5--22
- [][] 
- []
-
-) (./chapters/latex_examples.tex
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[21
-
-]
-第10章
-File: figures/ustc_logo_fig.pdf Graphic file (type QTm)
-<use  "figures/ustc_logo_fig.pdf" >
-File: figures/ustc_logo_fig.pdf Graphic file (type QTm)
- <use  "figures/ustc_logo_fig.pdf" >
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[22
-
-]
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[23]
-Overfull \vbox (7.11859pt too high) has occurred while \output is active []
-
-
-[24]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 9.
 *************************************************
 * fontspec warning: "script-not-exist"
 * 
@@ -2247,17 +2154,109 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 . - 'bold small caps'  (bx/sc) with NFSS spec.: 
 .................................................
 
-LaTeX Warning: Reference `first-code' on page 25 undefined on input line 155.
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 156.
 
+[10
+
+]
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[11]
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
+
+ []
+
+
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[13]
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[14]
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[15]) (./chapters/design_constraint.tex
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[16]
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[17]
+第4章
+) (./chapters/quality_characteristics.tex
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[18
+
+]
+第5章
+) (./chapters/others.tex
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[19
+
+]
+第6章
+) (./chapters/dependency.tex
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[20
+
+]
+第7章
+) (./chapters/importance_of_requirements.tex
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[21
+
+]
+第8章
+) (./chapters/to_be_determined.tex
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[22
+
+]
+第9章
+
+Overfull \hbox (23.8567pt too wide) in paragraph at lines 5--22
+ [][] 
+ []
+
+) (./chapters/latex_examples.tex
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[23
+
+]
+第10章
+File: figures/ustc_logo_fig.pdf Graphic file (type QTm)
+<use  "figures/ustc_logo_fig.pdf" >
+File: figures/ustc_logo_fig.pdf Graphic file (type QTm)
+ <use  "figures/ustc_logo_fig.pdf" >
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[24
+
+]
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
@@ -2266,6 +2265,23 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
 [26]
+
+LaTeX Warning: Reference `first-code' on page 27 undefined on input line 155.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[27]
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[28]
 LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 161
 .
  (/usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu1lmtt.fd
@@ -2274,7 +2290,7 @@ File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[27]
+[29]
 Overfull \hbox (14.8471pt too wide) in paragraph at lines 230--241
 [] 
  []
@@ -2283,11 +2299,11 @@ Overfull \hbox (14.8471pt too wide) in paragraph at lines 230--241
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[28]
+[30]
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[29
+[31
 
 
 ]) (./chapters/appendixA.tex
@@ -2296,7 +2312,7 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[30
+[32
 
 
 ]
@@ -2305,13 +2321,13 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[31
+[33
 
 ])
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[32]
+[34]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
  (./main.aux)
@@ -2328,12 +2344,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 42010 strings out of 493591
- 820288 string characters out of 6143546
- 837323 words of memory out of 5000000
- 44767 multiletter control sequences out of 15000+600000
- 17308 words of font info for 129 fonts, out of 8000000 for 9000
+ 42008 strings out of 493591
+ 820133 string characters out of 6143546
+ 835937 words of memory out of 5000000
+ 44764 multiletter control sequences out of 15000+600000
+ 17316 words of font info for 130 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 69i,18n,79p,10490b,3873s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,18n,79p,10490b,4037s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (34 pages).
+Output written on main.pdf (36 pages).
