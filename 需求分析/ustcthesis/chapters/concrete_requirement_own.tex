@@ -1,94 +1,91 @@
 \chapter{具体需求}
-\subsection{xxx1.1 作业/实验查询}
-  \subsubsection{介绍}
-作业/实验查询用于查询作业/实验情况。学生可以查到本人相关课程的作业情况。教师可以查询相应班级所有学生每次作业的提交情况。教学管理人员可以查询到自己所负责所有学生相应的作业提交情况。
-\subsubsection{输入}
-   不同用户的输入如下：
-   \begin{center}\begin{description}
-     \item[学生] 学生的输入为选择响应的课程或总体...
-     \item[老师] 老师可以选择相应的班级和某次作业或全部作业...
-     \item[教秘] 教秘可以可以选择自己所负责范围内的所有学生和课程的相应信息
-   \end{description}\end{center}
-\subsubsection{处理}
-A. 连接服务器，检查查询相应的权限，查询数据库。
+  \section{功能需求}
+    \subsection{xxx1.1 作业/实验查询}
+      \subsubsection{介绍}
+      作业/实验查询用于查询作业/实验情况。学生可以查到本人相关课程的作业情况。教师可以查询相应班级所有学生每次作业的提交情况。教学管理人员可以查询到自己所负责所有学生相应的作业提交情况。
+      \subsubsection{输入}
+      不同用户的输入如下：
+      \begin{center}\begin{description}
+        \item[学生] 学生的输入为选择响应的课程或总体...
+        \item[老师] 老师可以选择相应的班级和某次作业或全部作业...
+        \item[教秘] 教秘可以可以选择自己所负责范围内的所有学生和课程的相应信息
+      \end{description}\end{center}
+      \subsubsection{处理}
+      \begin{enumerate}
+        \item 连接服务器，检查查询相应的权限，查询数据库。
+        \item 连接查询失败，提示超时，并提示用户检查网络或重试。
+        \item 连接查询成功，更新本地数据。
+      \end{enumerate}
+      \subsubsection{输出}
+      \begin{itemize}
+        \item 显示更新后的本地数据或显示从服务器返回的数据。
+        \item 学生端更新相应的日程。
+      \end{itemize}
 
-B. 连接查询失败，提示超时，并提示用户检查网络或重试。
+    \subsection{xxx1.2 作业/实验/通知发布}
+      \subsubsection{介绍}
+      作业/实验/通知发布仅供教师端和管理人员使用。可以用于教师发布自己负责课程相关的作业、实验或通知。
+      \subsubsection{输入}
+      发布首先要新建条目（某次作业或通知等），之后输入相应发布的信息。
+      输入数据内容如下：
+      \begin{itemize}
+        \item 作业/实验/通知的名称。
+        \item 作业/实验/通知的文本内容。
+        \item 学生提交的截至日期，以日历形式选择。
+        \item 相应作业的材料，选择上传按键，上传相应文件。
+      \end{itemize}
+      \subsubsection{处理}
+      \begin{enumerate}
+        \item 连接服务器，检查查询相应的权限。
+        \item 连接失败或权限不对，提示用户。
+        \item 连接成功且权限正确，将数据更新到后台数据库中，将文件保存在服务器中。
+      \end{enumerate}
+      \subsubsection{输出}
+      相关数据存入服务器，客户端提示发布成功或其他异常信息。
 
-C. 连接查询成功，更新本地数据。
+    \subsection{xxx.3 作业/实验/通知修改删除}
+      \subsubsection{介绍}
+      仅供教师和管理人员使用。用于修改或删除已发布的作业/实验/通知。
+      \subsubsection{输入}
+      输入为准备修改的作业等的名称。进入发布界面后，输入要修改的内容或选择删除该作业、通知等。
+      \subsubsection{处理}
+      \begin{enumerate}
+        \item 连接服务器，检查查询相应的权限。
+        \item 连接失败或权限不对，提示用户。
+        \item 连接成功且权限正确，将数据更新到后台数据库中，将文件保存在服务器中。
+      \end{enumerate}
+      \subsubsection{输出}
+      在客户端上显示更新后的结果。
 
-\subsubsection{输出}
-A. 显示更新后的本地数据或显示从服务器返回的数据。
+    \subsection{xxx.4 作业/实验/通知提交}
+      \subsubsection{介绍}
+      仅供学生使用。学生提交完成的作业、实验或需要提交材料的通知。
+      \subsubsection{输入}
+      首先学生选择本人准备提交的作业。提交的内容可以如下：
+      \begin{itemize}
+        \item 作业/实验/通知的文本内容。
+        \item 相应的材料，选择上传按键，上传相应文件。
+      \end{itemize}
+      \subsubsection{处理}
+      \begin{enumerate}
+        \item 连接服务器
+        \item 连接失败，提示超时，并提示用户检查网络或重试。
+        \item 若连接成功，检测当前日期与该作业截止日期。
+        \item 若已过作业截止日期，则提交失败。
+        \item 若未到作业截至时间，上传数据到服务器，返回状态。
+        \item 从服务器返回成功，提示上传成功。
+        \item 从服务器返回失败，提示用户上传失败。
+      \end{enumerate}
+      \subsubsection{输出}
+      \begin{itemize}
+        \item 上传成功与否的提示
+        \item 上传成功则作业完成状况标示为已完成，并更新相应的日程。
+      \end{itemize}
 
-B. 学生端更新相应的日程。
-
-\subsection{xxx1.2 作业/实验/通知发布}
-  \subsubsection{介绍}
- 作业/实验/通知发布仅供教师端和管理人员使用。可以用于教师发布自己负责课程相关的作业、实验或通知。
-\subsubsection{输入}
- 发布首先要新建条目（某次作业或通知等），之后输入相应发布的信息。
- 输入数据内容如下：
-     \begin{itemize}
- \item 作业/实验/通知的名称。
-    \item 作业/实验/通知的文本内容。
-    \item 学生提交的截至日期，以日历形式选择。
-    \item 相应作业的材料，选择上传按键，上传相应文件。
-    \end{itemize}
-\subsubsection{处理}
-A. 连接服务器，检查查询相应的权限。
-
-B. 连接失败或权限不对，提示用户。
-
-C. 连接成功且权限正确，将数据更新到后台数据库中，将文件保存在服务器中。
-
-\subsubsection{输出}
-相关数据存入服务器，客户端提示发布成功或其他异常信息。
-\subsection{xxx.3 作业/实验/通知修改删除}
-  \subsubsection{介绍}
-仅供教师和管理人员使用。用于修改或删除已发布的作业/实验/通知。
-\subsubsection{输入}
-输入为准备修改的作业等的名称。进入发布界面后，输入要修改的内容或选择删除该作业、通知等。
-\subsubsection{处理}
-A. 连接服务器，检查查询相应的权限。
-
-B. 连接失败或权限不对，提示用户。
-
-C. 连接成功且权限正确，将数据更新到后台数据库中，将文件保存在服务器中。
-
-\subsubsection{输出}
-在客户端上显示更新后的结果。
-\subsection{xxx.4 作业/实验/通知提交}
-  \subsubsection{介绍}
-仅供学生使用。学生提交完成的作业、实验或需要提交材料的通知。
-\subsubsection{输入}
-首先学生选择本人准备提交的作业。提交的内容可以如下：
-\begin{itemize}
-    \item 作业/实验/通知的文本内容。
-    \item 相应的材料，选择上传按键，上传相应文件。
-  \end{itemize}
-\subsubsection{处理}
-A. 连接服务器
-
-B. 连接失败，提示超时，并提示用户检查网络或重试。
-.
-C. 若连接成功，检测当前日期与该作业截止日期。
-
-D. 若已过作业截止日期，则提交失败。
-
-E. 若未到作业截至时间，上传数据到服务器，返回状态。
-
-F. 从服务器返回成功，提示上传成功。
-
-G. 从服务器返回失败，提示用户上传失败。
-
-\subsubsection{输出}
-A. 上传成功与否的提示
-
-B. 上传成功则作业完成状况标示为已完成，并更新相应的日程。
-
-\subsection{xxx.5 作业/实验查看与批改}
-  \subsubsection{介绍}
-仅供教师端使用。作业/实验查看与批改用与教师查看学生相应的作业或实验。
-\subsubsection{输入}
+    \subsection{xxx.5 作业/实验查看与批改}
+      \subsubsection{介绍}
+      仅供教师端使用。作业/实验查看与批改用与教师查看学生相应的作业或实验。
+      \subsubsection{输入}
 A. 教师选择相应的作业，可选择将本次作业全部下载到本地或在线查看。
 
 B. 教师选择要查看/批改作业学生的名称或学号。
@@ -137,7 +134,11 @@ C. 显示待批改作业份数。
       \item 默认成绩的范围为[0,100]，超过此范围进行警告并且自动取最接近的可行值。可以通过自定义设置进行调整。
     \end{itemize}
     \subsubsection{处理}
-    首先通过按照默认规则和用户自定义的规则生成相关的约束对于输入数据的有效性进行验证。如果含有出错首先按照默认处理逻辑处理并且给出警告，如果不存在适配的处理流程则报错并要求用户进行修改。如果所有验证有效，存入相应的后台数据库中。
+    \begin{enumerate}
+      \item 按照默认规则和用户自定义的规则生成相关的约束对于输入数据的有效性进行验证。如果含有出错首先按照默认处理逻辑处理并且给出警告.
+      \item 如果不存在适配的处理流程则报错并要求用户进行修改。
+      \item 如果所有验证有效，转换为指定格式存入相应的后台数据库中。
+    \end{enumerate}
     \subsubsection{输出}
     数据最终存入后端的数据库中。
 
@@ -152,7 +153,11 @@ C. 显示待批改作业份数。
       \item[教秘] 教秘可以可以选择自己所负责范围内的所有学生和课程的相应信息
     \end{description}\end{center}
     \subsubsection{处理}
-    消息传递给后端数据库后检查相应的权限，如果权限符合则取出相应的数据传回。
+    \begin{enumerate}
+      \item 消息传递给后端数据库后检查相应的权限
+      \item 权限不足给出警告
+      \item 权限符合则取出相应的数据传回
+    \end{enumerate}
     \subsubsection{输出}
     接受后端数据库传回的数据并显示在客户端上。
 
@@ -170,10 +175,9 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
     在客户端中显示结果，同时根据操作类型和用户的选择决定是否需要更新原数据库。
 
-
   \subsection{002.1 资源上传}
     \subsubsection{介绍}
-
+    资源上传可用于教师分享课件等教学辅助材料。同时同学自身也可以分享有用材料。空间分为共享和私有两部分。私有空间可以用作个人文件的托管和同步。
     \subsubsection{输入}
     输入给定指定资源来源以及上传目的地，源有以下选项：
     \begin{itemize}
@@ -188,19 +192,24 @@ C. 显示待批改作业份数。
     \end{itemize}
     同时还要给出资源相应的权限设置如是否共享以及是否通知他人等。
     \subsubsection{处理}
-    对于给定的输入，首先判断对于目的地是否具有相应的权限，如无报错，如果需要申请先进行请求。有或者请求通过则继续。\\
-    然后检查相应的资源是否有效合法。如验证有效则快速比较后台数据库是否已经存在相应的数据，如不存在则存储，否则只建立相应的链接。\\
-
+    \begin{enumerate}
+      \item 对于给定的输入，首先判断对于目的地是否具有相应的权限，如无报错，如果需要申请先进行请求。有或者请求通过则继续。
+      \item 然后检查相应的资源是否有效合法。如验证有效则快速比较后台数据库是否已经存在相应的数据，如不存在则存储，否则只建立相应的链接。
+    \end{enumerate}
     \subsubsection{输出}
     将数据实际存储入相应服务器，同时反馈操作结果。
 
   \subsection{002.2 资源下载与浏览}
     \subsubsection{介绍}
-
+    资源下载用于获取远端分享的相关资源
     \subsubsection{输入}
     请求的资源以及请求的操作
     \subsubsection{处理}
-    检查响应的请求是否具有相关的权限，如果是下载则后台开启传输。如果是浏览则尝试进行打开。暂时支持的文件类型如下：
+    \begin{enumerate}
+      \item 检查响应的请求是否具有相关的权限，如果是下载则后台开启传输。
+      \item 如果是浏览则尝试进行打开。
+    \end{enumerate}
+    暂时支持浏览的文件类型如下：
     \begin{itemize}
       \item
     \end{itemize}
@@ -209,14 +218,14 @@ C. 显示待批改作业份数。
 
   \subsection{003.1 新建日程}
     \subsubsection{介绍}
-
+    本功能用于生成新的日程安排，辅助用户合理安排各项任务
     \subsubsection{输入}
     新建日程主要可以通过以下几种方式：
     \begin{itemize}
       \item 直接由用户输入各项参数生成新的日程提醒
       \item 通过作业实验以及考试等的通知安排自动生成日程
       \item 用户直接复制收到的通知等文本，提取其中的信息自动生成相关的日程
-    \end{itemize}
+    \end{itemize}\\
     每项日程有以下参数构成：
     \begin{itemize}
       \item 事件开始时间和结束时间，如果开始时间和结束时间相同则将此时间视作截止时间
@@ -228,59 +237,210 @@ C. 显示待批改作业份数。
     \end{itemize}
     \subsubsection{处理}
     处理流程如下：
-    \begin{itemize}
+    \begin{enumerate}
       \item 首先对输入进行解析，从中提取出相应的各项参数信息
       \item 对信息进行分析，检查是否有不合法之处，如当前时间已超出截止时间，该时间段已经有其他安排等并给出相应的提醒
       \item 根据信息生成日程安排存储至后端数据库并生成相应的提醒
-    \end{itemize}
+    \end{enumerate}
     \subsubsection{输出}
     输出一是存储至本地数据库中同时同步至远端，另外反馈是否成功。
 
   \subsection{003.2 日程显示与提醒}
     \subsubsection{介绍}
-
+    日程提醒显示用于提醒自身的任务安排，合理安排时间。避免遗忘重要事项。
     \subsubsection{输入}
     数据库中现存的日程数据。
     \subsubsection{处理}
-    将数据库中存储的日程信息获取排序，按照事件进行排布并输出至客户端。同时用截止日期和当前时间自动计算倒计时。同时检查是否有需要进行提醒的事项
+    \begin{enumerate}
+      \item 将数据库中存储的日程信息获取
+      \item 按用户指定方式排序，按照事件进行排布并输出至客户端。
+      \item 用截止日期和当前时间自动计算倒计时。同时检查是否有需要进行提醒的事项
+    \end{enumerate}
     \subsubsection{输出}
     输出至客户端相应页面，同时可调用铃声系统通知等进行提醒。
 
-  \subsection{004.1 新建主题}
+  \subsection{004.1 讨论区讨论}
     \subsubsection{介绍}
-
+    讨论区可以发布新的主题用于进行问题讨论，增强对知识的理解和应用。
+    讨论区需要具备以下功能：
+    \begin{itemize}
+      \item 发布新的主题
+      \item 回复
+      \item 修订
+    \end{itemize}
     \subsubsection{输入}
-    新建话题的主题以及简单描述。选择相应的讨论区。
+    \begin{itemize}
+      \item 所选择的操作：新建主题、回复等等
+      \item 操作内容，支持富文本格式
+    \end{itemize}
     \subsubsection{处理}
-    检查是否具有相关权限并简单判断内容是否合法。同时判断是否需要广播该消息以及广播对象。
+    \begin{enumerate}
+      \item 检查是否具有相关权限并简单判断内容是否合法。
+      \item 转换为指定的存储格式
+      \item 判断是否需要广播该消息以及广播对象。
+    \end{enumerate}
     \subsubsection{输出}
-    存储至后台数据库中。
-
-  \subsection{004.2 回复}
-    \subsubsection{介绍}
-
-    \subsubsection{输入}
-    回复内容
-    \subsubsection{处理}
-
-    \subsubsection{输出}
-    存储至后端数据库
+    存储至后台数据库中。如果需要广播调用广播接口。
 
   \subsection{007.1 新建博文}
+    \subsubsection{介绍}
+    博文主要用于用户分享学习经验等等认为有意义的东西，相比讨论区更加系统。
     \subsubsection{输入}
-    新建博文的主题以及内容
+    新建博文的主题以及内容。
     \subsubsection{处理}
+    转换为相应的存储结构存储至后台服务器。
     \subsubsection{输出}
+    输出存储至后台数据库并反馈是否成功。
 
-  \subsection{007.2 评论}
+  \subsection{005 课程考试排布}
+    \subsubsection{介绍}
+    课程考试排布功能主要用于辅助教学管理人员合理安排相关活动，减少冲突节约时间。
     \subsubsection{输入}
-    \subsubsection{处理}
-    \subsubsection{输出}
-
-  \subsection{005 课程排布}
-    \subsubsection{输入}
-    当前已知的所有预计开设课程以及选课学生信息。
+    \begin{itemize}
+      \item 对象学生的信息
+      \item 课程考试相关信息
+      \item 其他约束条件
+    \end{itemize}
     \subsubsection{处理}
     调用相关算法生成满足一下条件的课表：
     \subsubsection{输出}
     生成的课表信息
+
+ \subsection{008 用户登陆}
+    \subsubsection{介绍}
+	用户在IOS、Android、Web Browse输入账号和密码登录对应账户。
+登录成功后自动与服务器同步用户数据。
+    \subsubsection{输入}
+    用户输入邮箱或学号信息与密码，点击登陆。
+    \subsubsection{处理和输出}
+    A. 客户端联网查询账号与密码是否匹配，匹配成功完成登录。
+
+    B. 登录成功后，进行数据同步。
+
+    C. 若不匹配则提醒不匹配，请重新输入。
+
+    D. 密码为空，提示密码不得为空
+
+    E. 账户格式错误，提示请输出正确的账号
+
+    F. 连接超时，提示请检查网络连接
+ \subsection{009.1 学习笔记文本添加}
+    \subsubsection{介绍}
+	学生用户在课堂或者课下记录笔记。
+    \subsubsection{输入}
+	用户选择创建新的笔记或者修改已经存在的笔记，进入文本编辑界面进行，
+编辑完成后点击保存到本地或者上传，点击返回键退出。
+    \subsubsection{处理}
+	A. 记录笔记创建的课程名称。
+
+	B. 记录笔记创建的时间，和最后一次进行编辑的时间。
+
+	C. 点击保存到本地之后，保存笔记内容，并写入本地存储器。
+
+	D. 点击上传，保存笔记内容，上传到服务器。
+
+	E. 点击返回键，不保存返回上一层。
+    \subsubsection{输出}
+	保存已记录的笔记，同步。
+ \subsection{009.2 学习笔记课件修改}
+    \subsubsection{介绍}
+	学生用户在老师上传的课件上使用文本框或者画图功能添加批注笔记。
+    \subsubsection{输入}
+	用户在编辑阶段，点击添加画图或文本框。
+    \subsubsection{处理}
+	A. 添加画图，在课件编辑界面进行画图，结束之后保存更改后的课件。
+
+	B. 添加文本框，进入文本编辑界面输入文本框，并插入到课件中用户指定位置上。
+    \subsubsection{输出}
+	用户在课程课件上添加笔记或画图。
+
+ \subsection{009.3 学习笔记搜索}
+    \subsubsection{介绍}
+	对笔记（文本模块和课件模块）进行检索，
+可根据创建时间，修改时间，课程，文本进行搜索。
+    \subsubsection{输入}
+	用户点击搜索按钮，输入关键字
+    \subsubsection{处理和输出}
+	根据用户输入的搜索关键字进行搜索，结果按照时间，课程，文本可选分类显示
+无搜索结果则显示无结果
+
+ \subsection{009.4 学习笔记删除}
+    \subsubsection{介绍}
+	删除某一笔记
+    \subsubsection{输入}
+	用户长按笔记，点击删除按钮，删除云端保存的笔记。
+    \subsubsection{处理与输出}
+	对用户点击笔记进行删除，并进行数据同步，输出删除成功。
+
+
+ \subsection{009.5 学习笔记导出}
+    \subsubsection{介绍}
+	对用户的文本笔记和做过笔记的课件进行导出。
+    \subsubsection{输入}
+	用户点击导出按钮，并选择导出格式和保存目录。
+    \subsubsection{处理和输出}
+	A. 连接服务器，将用户的请求数据处理打包发送到用户端。
+
+	B. 按照制定格式和目录保存。
+
+	C.若连接服务器超时，则提示超时，重新导出。
+
+ \subsection{009.6 学习笔记共享}
+    \subsubsection{介绍}
+	用户与其他用户共享学习笔记。
+    \subsubsection{输入}
+	用户勾选想要与同课程下其他用户共享的笔记，点击共享。
+    \subsubsection{处理和输出}
+	A. 连接服务器，更改所选笔记的访问权限，并显示共享成功
+
+	B. 若连接服务器超时，则提示超时，重新共享
+
+\section{外部接口需求}
+  \subsection{软件接口}
+
+    \subsubsection{数据库}
+	\begin{center}\begin{description}
+      \item[名称] Mysql数据库
+      \item[助记符] Mysql
+      \item[版本号]
+	\item[来源] GPL
+	\item[接口] Database、Table相关操作和权限接口
+	\end{description}\end{center}
+
+    \subsubsection{服务器系统}
+	\begin{center}\begin{description}
+      \item[名称] macOS Sierra
+      \item[助记符] OS
+      \item[版本号] macOS Sierra 10.12.3
+	\item[来源] GPL
+	\item[接口] 服务器系统管理员权限和操作
+	\end{description}\end{center}
+
+    \subsubsection{网页服务系统}
+	\begin{center}\begin{description}
+      \item[名称] 网页服务系统
+      \item[助记符] web
+	\item[来源] GPL
+	\end{description}\end{center}
+
+  \subsection{硬件接口}
+    \subsubsection{Android系统}
+	\begin{center}\begin{description}
+      \item[名称] Android操作系统
+      \item[助记符] Android
+      \item[版本号]
+	\item[来源] Google
+	\item[接口] App开发软件接口，硬件支持
+	\end{description}\end{center}
+
+    \subsubsection{iOS系统}
+	\begin{center}\begin{description}
+      \item[名称] iOS操作系统
+      \item[助记符] iOS
+      \item[版本号] iOS 10
+	\item[来源] Apple
+	\item[接口] App开发软件接口，硬件支持
+	\end{description}\end{center}
+
+  \subsection{通讯接口}
+	TCP/IP网络服务

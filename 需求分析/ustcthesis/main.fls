@@ -331,8 +331,8 @@ INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT chapters/abstract.tex
-INPUT chapters/abstract.tex
+INPUT chapters/abstract_own.tex
+INPUT chapters/abstract_own.tex
 INPUT main.toc
 INPUT main.toc
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
@@ -390,16 +390,6 @@ INPUT chapters/importance_of_requirements.tex
 INPUT chapters/importance_of_requirements.tex
 INPUT chapters/to_be_determined.tex
 INPUT chapters/to_be_determined.tex
-INPUT chapters/latex_examples.tex
-INPUT chapters/latex_examples.tex
-INPUT figures/ustc_logo_fig.pdf
-INPUT figures/ustc_logo_fig.pdf
-INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
-INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
-INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu1lmtt.fd
-INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 INPUT main.bbl
 INPUT main.bbl
 INPUT chapters/appendixA.tex

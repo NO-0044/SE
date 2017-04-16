@@ -2,50 +2,49 @@ This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: ustcauthoryear.bst
+I found no \citation commands---while reading file main.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bib/tex.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-c   knuth  donald e
-c   mittelbach  frank   zz2004   goossens  michel   braams  johannes   carlisle  david
-c   knuth  donald e
-You've used 3 entries,
+You've used 0 entries,
             3913 wiz_defined-function locations,
-            813 strings with 6237 characters,
-and the built_in function-call counts, 4300 in all, are:
-= -- 138
-> -- 509
-< -- 311
-+ -- 172
-- -- 18
-* -- 99
-:= -- 537
-add.period$ -- 14
-call.type$ -- 3
-change.case$ -- 13
-chr.to.int$ -- 158
-cite$ -- 6
-duplicate$ -- 367
-empty$ -- 133
-format.name$ -- 20
-if$ -- 917
+            796 strings with 5980 characters,
+and the built_in function-call counts, 43 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 16
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 2
-newline$ -- 29
-num.names$ -- 12
-pop$ -- 177
+missing$ -- 0
+newline$ -- 10
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 0
 quote$ -- 0
-skip$ -- 360
+skip$ -- 1
 stack$ -- 0
-substring$ -- 181
-swap$ -- 5
-text.length$ -- 6
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
-top$ -- 3
-type$ -- 23
+top$ -- 0
+type$ -- 0
 warning$ -- 0
-while$ -- 16
+while$ -- 0
 width$ -- 0
-write$ -- 56
+write$ -- 9
+(There was 1 error message)
