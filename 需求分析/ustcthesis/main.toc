@@ -13,111 +13,136 @@
 \contentsline {section}{\numberline {2.4}假设和依赖关系}{9}{section.2.4}
 \addvspace {12bp}
 \contentsline {chapter}{\numberline {第3章\hspace {0.3em}}具体需求}{10}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}001.1 成绩录入}{10}{subsection.3.0.1}
+\contentsline {subsection}{\numberline {3.0.1}xxx1.1 作业/实验查询}{10}{subsection.3.0.1}
 \contentsline {subsubsection}{\numberline {3.0.1.1}介绍}{10}{subsubsection.3.0.1.1}
 \contentsline {subsubsection}{\numberline {3.0.1.2}输入}{10}{subsubsection.3.0.1.2}
 \contentsline {subsubsection}{\numberline {3.0.1.3}处理}{10}{subsubsection.3.0.1.3}
-\contentsline {subsubsection}{\numberline {3.0.1.4}输出}{11}{subsubsection.3.0.1.4}
-\contentsline {subsection}{\numberline {3.0.2}001.2 成绩查询}{11}{subsection.3.0.2}
-\contentsline {subsubsection}{\numberline {3.0.2.1}介绍}{11}{subsubsection.3.0.2.1}
+\contentsline {subsubsection}{\numberline {3.0.1.4}输出}{10}{subsubsection.3.0.1.4}
+\contentsline {subsection}{\numberline {3.0.2}xxx1.2 作业/实验/通知发布}{10}{subsection.3.0.2}
+\contentsline {subsubsection}{\numberline {3.0.2.1}介绍}{10}{subsubsection.3.0.2.1}
 \contentsline {subsubsection}{\numberline {3.0.2.2}输入}{11}{subsubsection.3.0.2.2}
 \contentsline {subsubsection}{\numberline {3.0.2.3}处理}{11}{subsubsection.3.0.2.3}
 \contentsline {subsubsection}{\numberline {3.0.2.4}输出}{11}{subsubsection.3.0.2.4}
-\contentsline {subsection}{\numberline {3.0.3}001.2 成绩统计和调整}{11}{subsection.3.0.3}
+\contentsline {subsection}{\numberline {3.0.3}xxx.3 作业/实验/通知修改删除}{11}{subsection.3.0.3}
 \contentsline {subsubsection}{\numberline {3.0.3.1}介绍}{11}{subsubsection.3.0.3.1}
-\contentsline {subsubsection}{\numberline {3.0.3.2}输入}{12}{subsubsection.3.0.3.2}
-\contentsline {subsubsection}{\numberline {3.0.3.3}处理}{12}{subsubsection.3.0.3.3}
+\contentsline {subsubsection}{\numberline {3.0.3.2}输入}{11}{subsubsection.3.0.3.2}
+\contentsline {subsubsection}{\numberline {3.0.3.3}处理}{11}{subsubsection.3.0.3.3}
 \contentsline {subsubsection}{\numberline {3.0.3.4}输出}{12}{subsubsection.3.0.3.4}
-\contentsline {subsection}{\numberline {3.0.4}002.1 资源上传}{12}{subsection.3.0.4}
+\contentsline {subsection}{\numberline {3.0.4}xxx.4 作业/实验/通知提交}{12}{subsection.3.0.4}
 \contentsline {subsubsection}{\numberline {3.0.4.1}介绍}{12}{subsubsection.3.0.4.1}
 \contentsline {subsubsection}{\numberline {3.0.4.2}输入}{12}{subsubsection.3.0.4.2}
-\contentsline {subsubsection}{\numberline {3.0.4.3}处理}{13}{subsubsection.3.0.4.3}
-\contentsline {subsubsection}{\numberline {3.0.4.4}输出}{13}{subsubsection.3.0.4.4}
-\contentsline {subsection}{\numberline {3.0.5}002.2 资源下载与浏览}{13}{subsection.3.0.5}
+\contentsline {subsubsection}{\numberline {3.0.4.3}处理}{12}{subsubsection.3.0.4.3}
+\contentsline {subsubsection}{\numberline {3.0.4.4}输出}{12}{subsubsection.3.0.4.4}
+\contentsline {subsection}{\numberline {3.0.5}xxx.5 作业/实验查看与批改}{13}{subsection.3.0.5}
 \contentsline {subsubsection}{\numberline {3.0.5.1}介绍}{13}{subsubsection.3.0.5.1}
 \contentsline {subsubsection}{\numberline {3.0.5.2}输入}{13}{subsubsection.3.0.5.2}
 \contentsline {subsubsection}{\numberline {3.0.5.3}处理}{13}{subsubsection.3.0.5.3}
 \contentsline {subsubsection}{\numberline {3.0.5.4}输出}{13}{subsubsection.3.0.5.4}
-\contentsline {subsection}{\numberline {3.0.6}003.1 新建日程}{14}{subsection.3.0.6}
-\contentsline {subsubsection}{\numberline {3.0.6.1}介绍}{14}{subsubsection.3.0.6.1}
+\contentsline {subsection}{\numberline {3.0.6}001.1 成绩录入}{13}{subsection.3.0.6}
+\contentsline {subsubsection}{\numberline {3.0.6.1}介绍}{13}{subsubsection.3.0.6.1}
 \contentsline {subsubsection}{\numberline {3.0.6.2}输入}{14}{subsubsection.3.0.6.2}
 \contentsline {subsubsection}{\numberline {3.0.6.3}处理}{14}{subsubsection.3.0.6.3}
 \contentsline {subsubsection}{\numberline {3.0.6.4}输出}{14}{subsubsection.3.0.6.4}
-\contentsline {subsection}{\numberline {3.0.7}003.2 日程显示与提醒}{15}{subsection.3.0.7}
+\contentsline {subsection}{\numberline {3.0.7}001.2 成绩查询}{15}{subsection.3.0.7}
 \contentsline {subsubsection}{\numberline {3.0.7.1}介绍}{15}{subsubsection.3.0.7.1}
 \contentsline {subsubsection}{\numberline {3.0.7.2}输入}{15}{subsubsection.3.0.7.2}
 \contentsline {subsubsection}{\numberline {3.0.7.3}处理}{15}{subsubsection.3.0.7.3}
 \contentsline {subsubsection}{\numberline {3.0.7.4}输出}{15}{subsubsection.3.0.7.4}
-\contentsline {subsection}{\numberline {3.0.8}004.1 新建主题}{15}{subsection.3.0.8}
+\contentsline {subsection}{\numberline {3.0.8}001.2 成绩统计和调整}{15}{subsection.3.0.8}
 \contentsline {subsubsection}{\numberline {3.0.8.1}介绍}{15}{subsubsection.3.0.8.1}
-\contentsline {subsubsection}{\numberline {3.0.8.2}输入}{15}{subsubsection.3.0.8.2}
-\contentsline {subsubsection}{\numberline {3.0.8.3}处理}{15}{subsubsection.3.0.8.3}
-\contentsline {subsubsection}{\numberline {3.0.8.4}输出}{15}{subsubsection.3.0.8.4}
-\contentsline {subsection}{\numberline {3.0.9}004.2 回复}{16}{subsection.3.0.9}
+\contentsline {subsubsection}{\numberline {3.0.8.2}输入}{16}{subsubsection.3.0.8.2}
+\contentsline {subsubsection}{\numberline {3.0.8.3}处理}{16}{subsubsection.3.0.8.3}
+\contentsline {subsubsection}{\numberline {3.0.8.4}输出}{16}{subsubsection.3.0.8.4}
+\contentsline {subsection}{\numberline {3.0.9}002.1 资源上传}{16}{subsection.3.0.9}
 \contentsline {subsubsection}{\numberline {3.0.9.1}介绍}{16}{subsubsection.3.0.9.1}
 \contentsline {subsubsection}{\numberline {3.0.9.2}输入}{16}{subsubsection.3.0.9.2}
-\contentsline {subsubsection}{\numberline {3.0.9.3}处理}{16}{subsubsection.3.0.9.3}
-\contentsline {subsubsection}{\numberline {3.0.9.4}输出}{16}{subsubsection.3.0.9.4}
-\contentsline {subsection}{\numberline {3.0.10}007.1 新建博文}{16}{subsection.3.0.10}
-\contentsline {subsubsection}{\numberline {3.0.10.1}输入}{16}{subsubsection.3.0.10.1}
-\contentsline {subsubsection}{\numberline {3.0.10.2}处理}{16}{subsubsection.3.0.10.2}
-\contentsline {subsubsection}{\numberline {3.0.10.3}输出}{16}{subsubsection.3.0.10.3}
-\contentsline {subsection}{\numberline {3.0.11}007.2 评论}{16}{subsection.3.0.11}
-\contentsline {subsubsection}{\numberline {3.0.11.1}输入}{16}{subsubsection.3.0.11.1}
-\contentsline {subsubsection}{\numberline {3.0.11.2}处理}{16}{subsubsection.3.0.11.2}
-\contentsline {subsubsection}{\numberline {3.0.11.3}输出}{16}{subsubsection.3.0.11.3}
-\contentsline {subsection}{\numberline {3.0.12}005 课程排布}{16}{subsection.3.0.12}
-\contentsline {subsubsection}{\numberline {3.0.12.1}输入}{16}{subsubsection.3.0.12.1}
-\contentsline {subsubsection}{\numberline {3.0.12.2}处理}{16}{subsubsection.3.0.12.2}
-\contentsline {subsubsection}{\numberline {3.0.12.3}输出}{17}{subsubsection.3.0.12.3}
+\contentsline {subsubsection}{\numberline {3.0.9.3}处理}{17}{subsubsection.3.0.9.3}
+\contentsline {subsubsection}{\numberline {3.0.9.4}输出}{17}{subsubsection.3.0.9.4}
+\contentsline {subsection}{\numberline {3.0.10}002.2 资源下载与浏览}{17}{subsection.3.0.10}
+\contentsline {subsubsection}{\numberline {3.0.10.1}介绍}{17}{subsubsection.3.0.10.1}
+\contentsline {subsubsection}{\numberline {3.0.10.2}输入}{17}{subsubsection.3.0.10.2}
+\contentsline {subsubsection}{\numberline {3.0.10.3}处理}{17}{subsubsection.3.0.10.3}
+\contentsline {subsubsection}{\numberline {3.0.10.4}输出}{17}{subsubsection.3.0.10.4}
+\contentsline {subsection}{\numberline {3.0.11}003.1 新建日程}{17}{subsection.3.0.11}
+\contentsline {subsubsection}{\numberline {3.0.11.1}介绍}{17}{subsubsection.3.0.11.1}
+\contentsline {subsubsection}{\numberline {3.0.11.2}输入}{17}{subsubsection.3.0.11.2}
+\contentsline {subsubsection}{\numberline {3.0.11.3}处理}{18}{subsubsection.3.0.11.3}
+\contentsline {subsubsection}{\numberline {3.0.11.4}输出}{18}{subsubsection.3.0.11.4}
+\contentsline {subsection}{\numberline {3.0.12}003.2 日程显示与提醒}{18}{subsection.3.0.12}
+\contentsline {subsubsection}{\numberline {3.0.12.1}介绍}{18}{subsubsection.3.0.12.1}
+\contentsline {subsubsection}{\numberline {3.0.12.2}输入}{18}{subsubsection.3.0.12.2}
+\contentsline {subsubsection}{\numberline {3.0.12.3}处理}{19}{subsubsection.3.0.12.3}
+\contentsline {subsubsection}{\numberline {3.0.12.4}输出}{19}{subsubsection.3.0.12.4}
+\contentsline {subsection}{\numberline {3.0.13}004.1 新建主题}{19}{subsection.3.0.13}
+\contentsline {subsubsection}{\numberline {3.0.13.1}介绍}{19}{subsubsection.3.0.13.1}
+\contentsline {subsubsection}{\numberline {3.0.13.2}输入}{19}{subsubsection.3.0.13.2}
+\contentsline {subsubsection}{\numberline {3.0.13.3}处理}{19}{subsubsection.3.0.13.3}
+\contentsline {subsubsection}{\numberline {3.0.13.4}输出}{19}{subsubsection.3.0.13.4}
+\contentsline {subsection}{\numberline {3.0.14}004.2 回复}{19}{subsection.3.0.14}
+\contentsline {subsubsection}{\numberline {3.0.14.1}介绍}{19}{subsubsection.3.0.14.1}
+\contentsline {subsubsection}{\numberline {3.0.14.2}输入}{19}{subsubsection.3.0.14.2}
+\contentsline {subsubsection}{\numberline {3.0.14.3}处理}{19}{subsubsection.3.0.14.3}
+\contentsline {subsubsection}{\numberline {3.0.14.4}输出}{19}{subsubsection.3.0.14.4}
+\contentsline {subsection}{\numberline {3.0.15}007.1 新建博文}{20}{subsection.3.0.15}
+\contentsline {subsubsection}{\numberline {3.0.15.1}输入}{20}{subsubsection.3.0.15.1}
+\contentsline {subsubsection}{\numberline {3.0.15.2}处理}{20}{subsubsection.3.0.15.2}
+\contentsline {subsubsection}{\numberline {3.0.15.3}输出}{20}{subsubsection.3.0.15.3}
+\contentsline {subsection}{\numberline {3.0.16}007.2 评论}{20}{subsection.3.0.16}
+\contentsline {subsubsection}{\numberline {3.0.16.1}输入}{20}{subsubsection.3.0.16.1}
+\contentsline {subsubsection}{\numberline {3.0.16.2}处理}{20}{subsubsection.3.0.16.2}
+\contentsline {subsubsection}{\numberline {3.0.16.3}输出}{20}{subsubsection.3.0.16.3}
+\contentsline {subsection}{\numberline {3.0.17}005 课程排布}{20}{subsection.3.0.17}
+\contentsline {subsubsection}{\numberline {3.0.17.1}输入}{20}{subsubsection.3.0.17.1}
+\contentsline {subsubsection}{\numberline {3.0.17.2}处理}{20}{subsubsection.3.0.17.2}
+\contentsline {subsubsection}{\numberline {3.0.17.3}输出}{20}{subsubsection.3.0.17.3}
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第4章\hspace {0.3em}}总体设计约束}{18}{chapter.4}
-\contentsline {section}{\numberline {4.1}标准符合性}{18}{section.4.1}
-\contentsline {section}{\numberline {4.2}硬件约束}{18}{section.4.2}
-\contentsline {section}{\numberline {4.3}技术限制}{18}{section.4.3}
+\contentsline {chapter}{\numberline {第4章\hspace {0.3em}}总体设计约束}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}标准符合性}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}硬件约束}{21}{section.4.2}
+\contentsline {section}{\numberline {4.3}技术限制}{21}{section.4.3}
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第5章\hspace {0.3em}}软件质量特性}{19}{chapter.5}
+\contentsline {chapter}{\numberline {第5章\hspace {0.3em}}软件质量特性}{22}{chapter.5}
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第6章\hspace {0.3em}}其他需求}{20}{chapter.6}
-\contentsline {section}{\numberline {6.1}数据库}{20}{section.6.1}
-\contentsline {section}{\numberline {6.2}操作}{20}{section.6.2}
-\contentsline {section}{\numberline {6.3}本地化}{20}{section.6.3}
+\contentsline {chapter}{\numberline {第6章\hspace {0.3em}}其他需求}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}数据库}{23}{section.6.1}
+\contentsline {section}{\numberline {6.2}操作}{23}{section.6.2}
+\contentsline {section}{\numberline {6.3}本地化}{23}{section.6.3}
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第7章\hspace {0.3em}}依赖关系}{21}{chapter.7}
+\contentsline {chapter}{\numberline {第7章\hspace {0.3em}}依赖关系}{24}{chapter.7}
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第8章\hspace {0.3em}}需求分级}{22}{chapter.8}
+\contentsline {chapter}{\numberline {第8章\hspace {0.3em}}需求分级}{25}{chapter.8}
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第9章\hspace {0.3em}}待确定问题}{23}{chapter.9}
+\contentsline {chapter}{\numberline {第9章\hspace {0.3em}}待确定问题}{26}{chapter.9}
 \addvspace {12bp}
-\contentsline {chapter}{\numberline {第10章\hspace {0.3em}}Latex使用例子}{24}{chapter.10}
-\contentsline {section}{\numberline {10.1}图}{24}{section.10.1}
-\contentsline {subsection}{\numberline {10.1.1}示例}{24}{subsection.10.1.1}
-\contentsline {subsection}{\numberline {10.1.2}带图注的图}{24}{subsection.10.1.2}
-\contentsline {section}{\numberline {10.2}表格}{24}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}A Simple Table}{24}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}长表格}{24}{subsection.10.2.2}
-\contentsline {section}{\numberline {10.3}算法环境}{27}{section.10.3}
-\contentsline {section}{\numberline {10.4}代码环境}{27}{section.10.4}
-\contentsline {section}{\numberline {10.5}引用文献标注}{29}{section.10.5}
-\contentsline {subsection}{\numberline {10.5.1}著者-出版年制标注法}{29}{subsection.10.5.1}
-\contentsline {subsection}{\numberline {10.5.2}顺序编码制标注法}{29}{subsection.10.5.2}
-\contentsline {subsection}{\numberline {10.5.3}其他形式的标注}{30}{subsection.10.5.3}
+\contentsline {chapter}{\numberline {第10章\hspace {0.3em}}Latex使用例子}{27}{chapter.10}
+\contentsline {section}{\numberline {10.1}图}{27}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}示例}{27}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}带图注的图}{27}{subsection.10.1.2}
+\contentsline {section}{\numberline {10.2}表格}{27}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}A Simple Table}{27}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}长表格}{27}{subsection.10.2.2}
+\contentsline {section}{\numberline {10.3}算法环境}{30}{section.10.3}
+\contentsline {section}{\numberline {10.4}代码环境}{30}{section.10.4}
+\contentsline {section}{\numberline {10.5}引用文献标注}{32}{section.10.5}
+\contentsline {subsection}{\numberline {10.5.1}著者-出版年制标注法}{32}{subsection.10.5.1}
+\contentsline {subsection}{\numberline {10.5.2}顺序编码制标注法}{32}{subsection.10.5.2}
+\contentsline {subsection}{\numberline {10.5.3}其他形式的标注}{33}{subsection.10.5.3}
 \addvspace {12bp}
-\contentsline {chapter}{参考文献}{31}{chapter*.13}
-\contentsline {chapter}{\numberline {附录 A\hspace {0.3em}}可行性分析结果}{32}{appendix.A}
-\contentsline {chapter}{\numberline {附录 B\hspace {0.3em}}需求建模 }{33}{appendix.B}
-\contentsline {section}{\numberline {B.1}数据流图}{33}{section.B.1}
-\contentsline {subsection}{\numberline {B.1.1}顶层数据流图}{33}{subsection.B.1.1}
-\contentsline {subsection}{\numberline {B.1.2}层数据流图}{33}{subsection.B.1.2}
-\contentsline {subsection}{\numberline {B.1.3}层数据流图}{33}{subsection.B.1.3}
-\contentsline {section}{\numberline {B.2}数据字典}{33}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}数据流说明}{33}{subsection.B.2.1}
-\contentsline {subsubsection}{\numberline {B.2.1.1}数据流1名称}{33}{subsubsection.B.2.1.1}
-\contentsline {subsubsection}{\numberline {B.2.1.2}数据流2名称}{33}{subsubsection.B.2.1.2}
-\contentsline {subsection}{\numberline {B.2.2}数据存储说明}{34}{subsection.B.2.2}
-\contentsline {subsubsection}{\numberline {B.2.2.1}数据存储1名称}{34}{subsubsection.B.2.2.1}
-\contentsline {subsubsection}{\numberline {B.2.2.2}数据存储2名称}{34}{subsubsection.B.2.2.2}
-\contentsline {subsection}{\numberline {B.2.3}加工说明}{34}{subsection.B.2.3}
-\contentsline {subsubsection}{\numberline {B.2.3.1}加工1名称}{34}{subsubsection.B.2.3.1}
-\contentsline {subsubsection}{\numberline {B.2.3.2}加工2名称}{34}{subsubsection.B.2.3.2}
+\contentsline {chapter}{参考文献}{34}{chapter*.13}
+\contentsline {chapter}{\numberline {附录 A\hspace {0.3em}}可行性分析结果}{35}{appendix.A}
+\contentsline {chapter}{\numberline {附录 B\hspace {0.3em}}需求建模 }{36}{appendix.B}
+\contentsline {section}{\numberline {B.1}数据流图}{36}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}顶层数据流图}{36}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}层数据流图}{36}{subsection.B.1.2}
+\contentsline {subsection}{\numberline {B.1.3}层数据流图}{36}{subsection.B.1.3}
+\contentsline {section}{\numberline {B.2}数据字典}{36}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}数据流说明}{36}{subsection.B.2.1}
+\contentsline {subsubsection}{\numberline {B.2.1.1}数据流1名称}{36}{subsubsection.B.2.1.1}
+\contentsline {subsubsection}{\numberline {B.2.1.2}数据流2名称}{36}{subsubsection.B.2.1.2}
+\contentsline {subsection}{\numberline {B.2.2}数据存储说明}{37}{subsection.B.2.2}
+\contentsline {subsubsection}{\numberline {B.2.2.1}数据存储1名称}{37}{subsubsection.B.2.2.1}
+\contentsline {subsubsection}{\numberline {B.2.2.2}数据存储2名称}{37}{subsubsection.B.2.2.2}
+\contentsline {subsection}{\numberline {B.2.3}加工说明}{37}{subsection.B.2.3}
+\contentsline {subsubsection}{\numberline {B.2.3.1}加工1名称}{37}{subsubsection.B.2.3.1}
+\contentsline {subsubsection}{\numberline {B.2.3.2}加工2名称}{37}{subsubsection.B.2.3.2}
 \contentsfinish 
