@@ -1,4 +1,5 @@
 \chapter{具体需求}
+\section{功能需求}
   \subsection{001.1 成绩录入}
     \subsubsection{介绍}
     成绩输入仅供教师端使用。可以用于登记考试/作业等等的成绩。
@@ -169,3 +170,143 @@
     调用相关算法生成满足一下条件的课表：
     \subsubsection{输出}
     生成的课表信息
+
+ \subsection{008 用户登陆}
+    \subsubsection{介绍}
+	用户在IOS、Android、Web Browse输入账号和密码登录对应账户。
+登录成功后自动与服务器同步用户数据。
+    \subsubsection{输入}
+    用户输入邮箱或学号信息与密码，点击登陆。
+    \subsubsection{处理和输出}
+    A. 客户端联网查询账号与密码是否匹配，匹配成功完成登录。
+
+    B. 登录成功后，进行数据同步。
+
+    C. 若不匹配则提醒不匹配，请重新输入。
+
+    D. 密码为空，提示密码不得为空
+
+    E. 账户格式错误，提示请输出正确的账号
+
+    F. 连接超时，提示请检查网络连接
+ \subsection{009.1 学习笔记文本添加}
+    \subsubsection{介绍}
+	学生用户在课堂或者课下记录笔记。
+    \subsubsection{输入}
+	用户选择创建新的笔记或者修改已经存在的笔记，进入文本编辑界面进行，
+编辑完成后点击保存到本地或者上传，点击返回键退出。
+    \subsubsection{处理}
+	A. 记录笔记创建的课程名称。
+
+	B. 记录笔记创建的时间，和最后一次进行编辑的时间。
+
+	C. 点击保存到本地之后，保存笔记内容，并写入本地存储器。
+
+	D. 点击上传，保存笔记内容，上传到服务器。
+	
+	E. 点击返回键，不保存返回上一层。
+    \subsubsection{输出}
+	保存已记录的笔记，同步。
+ \subsection{009.2 学习笔记课件修改}
+    \subsubsection{介绍}
+	学生用户在老师上传的课件上使用文本框或者画图功能添加批注笔记。
+    \subsubsection{输入}
+	用户在编辑阶段，点击添加画图或文本框。
+    \subsubsection{处理}
+	A. 添加画图，在课件编辑界面进行画图，结束之后保存更改后的课件。
+	
+	B. 添加文本框，进入文本编辑界面输入文本框，并插入到课件中用户指定位置上。
+    \subsubsection{输出}
+	用户在课程课件上添加笔记或画图。
+
+ \subsection{009.3 学习笔记搜索}
+    \subsubsection{介绍}
+	对笔记（文本模块和课件模块）进行检索，
+可根据创建时间，修改时间，课程，文本进行搜索。
+    \subsubsection{输入}
+	用户点击搜索按钮，输入关键字
+    \subsubsection{处理和输出}
+	根据用户输入的搜索关键字进行搜索，结果按照时间，课程，文本可选分类显示
+无搜索结果则显示无结果
+
+ \subsection{009.4 学习笔记删除}
+    \subsubsection{介绍}
+	删除某一笔记
+    \subsubsection{输入}
+	用户长按笔记，点击删除按钮，删除云端保存的笔记。
+    \subsubsection{处理与输出}
+	对用户点击笔记进行删除，并进行数据同步，输出删除成功。
+    
+
+ \subsection{009.5 学习笔记导出}
+    \subsubsection{介绍}
+	对用户的文本笔记和做过笔记的课件进行导出。
+    \subsubsection{输入}
+	用户点击导出按钮，并选择导出格式和保存目录。
+    \subsubsection{处理和输出}
+	A. 连接服务器，将用户的请求数据处理打包发送到用户端。
+	
+	B. 按照制定格式和目录保存。
+	
+	C.若连接服务器超时，则提示超时，重新导出。
+
+ \subsection{009.6 学习笔记共享}
+    \subsubsection{介绍}
+	用户与其他用户共享学习笔记。
+    \subsubsection{输入}
+	用户勾选想要与同课程下其他用户共享的笔记，点击共享。
+    \subsubsection{处理和输出}
+	A. 连接服务器，更改所选笔记的访问权限，并显示共享成功
+
+	B. 若连接服务器超时，则提示超时，重新共享
+
+\section{外部接口需求}
+  \subsection{软件接口}
+
+    \subsubsection{数据库}
+	\begin{center}\begin{description}
+      \item[名称] Mysql数据库
+      \item[助记符] Mysql
+      \item[版本号] 
+	\item[来源] GPL
+	\item[接口] Database、Table相关操作和权限接口
+	\end{description}\end{center}
+
+    \subsubsection{服务器系统}
+	\begin{center}\begin{description}
+      \item[名称] macOS Sierra
+      \item[助记符] OS
+      \item[版本号] macOS Sierra 10.12.3
+	\item[来源] GPL
+	\item[接口] 服务器系统管理员权限和操作
+	\end{description}\end{center}
+
+    \subsubsection{网页服务系统}
+	\begin{center}\begin{description}
+      \item[名称] 网页服务系统
+      \item[助记符] web
+	\item[来源] GPL
+	\end{description}\end{center}
+
+  \subsection{硬件接口}
+    \subsubsection{Android系统}
+	\begin{center}\begin{description}
+      \item[名称] Android操作系统
+      \item[助记符] Android
+      \item[版本号] 
+	\item[来源] Google
+	\item[接口] App开发软件接口，硬件支持
+	\end{description}\end{center}
+
+    \subsubsection{iOS系统}
+	\begin{center}\begin{description}
+      \item[名称] iOS操作系统
+      \item[助记符] iOS
+      \item[版本号] iOS 10
+	\item[来源] Apple
+	\item[接口] App开发软件接口，硬件支持
+	\end{description}\end{center}
+
+  \subsection{通讯接口}
+	TCP/IP网络服务
+
