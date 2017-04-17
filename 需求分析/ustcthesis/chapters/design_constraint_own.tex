@@ -2,16 +2,16 @@
 <Describe any items or issues that will limit the options available to the developers. >
 
 描述可能限制开发人员选择的事项。
- 
+
 \section{标准符合性}
 本软件会发布在ios平台、android平台上，对应的版本有相应的标准和规范。具体 内容会在技术限制中详细说明。本软件的客户端和服务器通信时采用国际标准的通信协议，包括 但不限于TCP,UDP等。本软件在服务器端使用数据库存储用户数据，数据库应当符合国家标准。 本软件在发布时必须符合当地及其国家的技术标准和法律
 
 \section{硬件约束}
 \subsection
 本软件的ios版本符合Apple公司的AppStore要求的规范，
-https://developer.apple.com/app-store/review/guidelines/cn/#hardware-compatibility
+%https://developer.apple.com/app-store/review/guidelines/cn/#hardware-compatibility
 例如：
-\subsubsection	
+\subsubsection
 通过设计，使App节省能耗。App不应快速耗尽电池电能、产生过多的热量或对设备资源造成不必要的负担。
 对于 Apple TV app，应确保用户无需使用Siri Remote或第三方游戏控制器之外的硬件输入。
 App 不得建议或要求重新启动设备。
@@ -34,4 +34,3 @@ App 必须适当地沙盒化，并遵循“macOS File System Documentation”。
 本软件不同用户可以并行操作，相同用户可以在不同的客户端中同时登陆服务器。当用户登 录时会从服务器端同步数据，用户的所有编辑都在本地进行。用户端和服务器端只会传输完整的 文件。
 为了避免丢失数据，本软件使用TCP协议用于通信协议，所有的规范都以RFC文档为标准。
 为了统一规范以便于后期的调试和修改，所有的开发人员必须遵循相应的设计规范，同时也 必须遵循相应的编程规范。
-
