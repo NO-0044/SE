@@ -11,49 +11,49 @@
 \subsubsection{日程管理模块}
 \begin{figure}[H]
 \centering
-\includegraphics[width=15cm]{level1_日程管理}
+\includegraphics[width=15cm]{level1_1}
 \caption{日程管理模块功能数据流图}
 \end{figure}
 \subsubsection{作业实验模块}
 \begin{figure}[H]
 \centering
-\includegraphics[width=15cm]{level1_作业}
+\includegraphics[width=15cm]{level1_2}
 \caption{日程管理模块功能数据流图}
 \end{figure}
 \subsubsection{学习笔记模块}
 \begin{figure}[H]
 \centering
-\includegraphics[width=15cm]{level1_学习笔记}
+\includegraphics[width=15cm]{level1_3}
 \caption{学习笔记模块功能数据流图}
 \end{figure}
 \subsubsection{成绩管理模块}
 \begin{figure}[H]
 \centering
-\includegraphics[width=15cm]{level1_成绩管理}
+\includegraphics[width=15cm]{level1_4}
 \caption{成绩管理模块功能数据流图}
 \end{figure}
 \subsubsection{用户管理模块}
 \begin{figure}[H]
 \centering
-\includegraphics[width=15cm]{level1_用户管理}
+\includegraphics[width=15cm]{level1_5}
 \caption{用户理模块功能数据流图}
 \end{figure}
 \subsubsection{讨论区模块}
 \begin{figure}[H]
 \centering
-\includegraphics[width=15cm]{level1_讨论区}
+\includegraphics[width=15cm]{level1_6}
 \caption{讨论区模块功能数据流图}
 \end{figure}
 \subsubsection{资源共享模块}
 \begin{figure}[H]
 \centering
-\includegraphics[width=15cm]{level1_资源共享}
+\includegraphics[width=15cm]{level1_7}
 \caption{资源共享模块功能数据流图}
 \end{figure}
 \subsubsection{通知管理模块}
 \begin{figure}[H]
 \centering
-\includegraphics[width=15cm]{level1_通知管理}
+\includegraphics[width=15cm]{level1_8}
 \caption{通知管理模块功能数据流图}
 \end{figure}
 
@@ -183,17 +183,20 @@
 若使用git提交，则同样保存按照git服务器保存在服务器上。
 
 \subsubsection{用户账号数据库存储}
-\item简述：服务器端数据库存储用户的邮箱，学号，姓名，密码，用户权限，选修课程，课程详情等基本信息
-\item数据排列：数据存在多个table，以用户邮箱，学生姓名，课程名称为主键，数据按主键排列
-
+\begin{itemize}
+\item 简述：服务器端数据库存储用户的邮箱，学号，姓名，密码，用户权限，选修课程，课程详情等基本信息
+\item 数据排列：数据存在多个table，以用户邮箱，学生姓名，课程名称为主键，数据按主键排列
+\end{itemize}
 \subsubsection{笔记数据库存储}
-\item简述：存储在服务器数据库中的用户信息，笔记内容，笔记创建时间，相关学科等信息
-\item数据排列：数据存在多个table，数据以用户账户，笔记学科为主键，笔记按主键排列。
-
+\begin{itemize}
+\item 简述：存储在服务器数据库中的用户信息，笔记内容，笔记创建时间，相关学科等信息
+\item 数据排列：数据存在多个table，数据以用户账户，笔记学科为主键，笔记按主键排列。
+\end{itemize}
 \subsubsection{笔记数据库本地存储}
-\item简述：存储在客户端数据库中的笔记内容，笔记创建时间，相关学科等信息
-\item数据排列：数据存在多个table，数据以笔记创建时间，笔记学科为主键，笔记按主键排列。
-
+\begin{itemize}
+\item 简述：存储在客户端数据库中的笔记内容，笔记创建时间，相关学科等信息
+\item 数据排列：数据存在多个table，数据以笔记创建时间，笔记学科为主键，笔记按主键排列。
+\end{itemize}
 \subsection{加工说明}
 \subsubsection{发布作业/实验/通知}
 用户将作业/实验/通知填写好发送。
