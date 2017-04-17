@@ -17,15 +17,40 @@
 
 \section{数据字典}
 \subsection{数据流说明}
-\subsubsection{数据流1名称}
-<Title of  the data flow should accord with the one in data flow diagram, and the Data description notions should be used.  >
+\subsubsection{请求}
+来源：用户
+简述：用户对数据“请求操作”
+去向：请求解析
 
-与数据流图中的名称一致，采用数据描述符号说明数据流的内容
+\subsubsection{信息录入}
+来源：请求解析
+简介：讲用户信息录入数据库
+去向：用户管理模块
 
-\subsubsection{数据流2名称}
-<Title of  the data flow should accord with the one in data flow diagram, and the Data description notions should be used   >
+\subsubsection{用户信息}
+来源：用户管理模块
+简介：从数据库中导出的用户信息
+去向：返回数据解析
 
-与数据流图中的名称一致，采用数据描述符号说明数据流的内容
+\subsubsection{反馈}
+来源：返回数据解析
+简介：客户端对于用户数据的处理结果
+去向：用户
+
+\subsubsection{笔记查询}
+来源：请求解析
+简介：对笔记数据进行查询请求
+去向：学习笔记模块
+
+\subsubsection{笔记创建}
+来源：请求解析
+简介：新的笔记条目的创建
+去向：学习笔记模块
+
+\subsubsection{笔记内容}
+来源：学习笔记模块
+简介：用户查询的笔记内容
+去向：返回数据解析
 
 \subsection{数据存储说明}
 \subsubsection{数据存储1名称}
