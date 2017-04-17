@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\caption{依赖关系}
+\begin{tabular}{|c|c|c|}
+    \hline
+    主体 & 依赖 & 说明 \\
+    \hline
+    R.FUNC.BB.002 & R.FUNC.BB.003 & 作业实验的查询依赖于作业实验的发布 \\
+    \hline
+    R.FUNC.BB.004 & R.FUNC.BB.003 & 作业实验的修改删除依赖于作业实验的发布\\
+    \hline
+    R.FUNC.BB.005 & R.FUNC.BB.003 & 作业实验的提交依赖于作业实验的发布\\
+    \hline
+    R.FUNC.BB.006 & R.FUNC.BB.005 & 作业实验的查看批改依赖于作业实验的提交\\
+    \hline
+    R.FUNC.BB.008 & R.FUNC.BB.007 & 成绩的查询依赖于成绩的录入\\
+    \hline
+    R.FUNC.BB.009 & R.FUNC.BB.007 & 成绩的统计和调整依赖于成绩的录入\\
+    \hline
+    R.FUNC.BB.012 & R.FUNC.BB.010 & 资源的下载和浏览依赖于资源的上传\\
+    \hline
+    R.FUNC.BB.014 & R.FUNC.BB.013 & 日程的显示与提醒依赖于日程的创建\\
+    \hline
+\end{tabular}
+\end{table}
