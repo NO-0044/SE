@@ -20,11 +20,11 @@
       作业/实验查询用于查询作业/实验情况。学生可以查到本人相关课程的作业情况。教师可以查询相应班级所有学生每次作业的提交情况。教学管理人员可以查询到自己所负责所有学生相应的作业提交情况。
       \subsubsection{输入}
       不同用户的输入如下：
-      \begin{center}\begin{description}
+      \begin{description}
         \item[学生] 学生的输入为选择响应的课程或总体...
         \item[老师] 老师可以选择相应的班级和某次作业或全部作业...
         \item[教秘] 教秘可以可以选择自己所负责范围内的所有学生和课程的相应信息
-      \end{description}\end{center}
+      \end{description}
       \subsubsection{处理}
       \begin{enumerate}
         \item 连接服务器，检查查询相应的权限，查询数据库。
@@ -64,7 +64,7 @@
       \subsubsection{输入}
 	    \begin{itemize}
         \item 输入为准备修改的作业等的名称。进入发布界面后，输入要修改的内容或选择删除该作业、通知等。
-	      \item 若选择发布实验，则需要选择单人完成还是团队完成（实验可用git进行版本控制）。
+	      \item 若选择发布实验，则需要选择单人完成还是团队完成(实验可用git进行版本控制)。
       \end{itemize}
       \subsubsection{处理}
       \begin{enumerate}
@@ -83,7 +83,7 @@
       \begin{itemize}
         \item 作业/实验/通知的文本内容。
         \item 相应的材料，选择上传按键，上传相应文件。
-	   \item 通过git提交，需指定要提交的库。
+	      \item 通过git提交，需指定要提交的库。
       \end{itemize}
       \subsubsection{处理}
       \begin{enumerate}
@@ -98,7 +98,7 @@
       \subsubsection{输出}
       \begin{itemize}
         \item 上传成功与否的提示
-        \item 上传成功则作业完成状况标示为已完成，并更新相应的日程。
+        \item 上传成功则作业完成状况标示为已完成，并更新相应的日程
       \end{itemize}
 
     \subsection{R.FUNC.BB.006 作业/实验查看与批改}
@@ -157,11 +157,11 @@
     成绩查询用于查询已经录入的成绩。学生可以查到本人相应课程的所有成绩。老师可以查到相应班级所有同学的成绩。教学管理人员可以查询自己所负责所有学生的相应成绩。
     \subsubsection{输入}
     不同用户的输入如下：
-    \begin{center}\begin{description}
+    \begin{description}
       \item[学生] 学生的输入为选择响应的课程和某次考试/作业/...
       \item[老师] 老师可以选择相应的班级和某次考试/作业/...
       \item[教秘] 教秘可以可以选择自己所负责范围内的所有学生和课程的相应信息
-    \end{description}\end{center}
+    \end{description}
     \subsubsection{处理}
     \begin{enumerate}
       \item 消息传递给后端数据库后检查相应的权限
@@ -219,10 +219,6 @@
       \item 检查响应的请求是否具有相关的权限，如果是下载则后台开启传输。
       \item 如果是浏览则尝试进行打开。
     \end{enumerate}
-    暂时支持浏览的文件类型如下：
-    \begin{itemize}
-      \item
-    \end{itemize}
     \subsubsection{输出}
     下载存储至本地，浏览输出至相应的客户端。
 
@@ -285,9 +281,9 @@
     \end{itemize}
     \subsubsection{处理}
     \begin{enumerate}
-      \item 检查是否具有相关权限并简单判断内容是否合法。
+      \item 检查是否具有相关权限并简单判断内容是否合法
       \item 转换为指定的存储格式
-      \item 判断是否需要广播该消息以及广播对象。
+      \item 判断是否需要广播该消息以及广播对象
     \end{enumerate}
     \subsubsection{输出}
     存储至后台数据库中。如果需要广播调用广播接口。
@@ -316,7 +312,6 @@
     \subsubsection{输出}
     生成的课表信息
 
-
  \subsection{R.FUNC.BB.018 学习笔记文本添加}
     \subsubsection{介绍}
     学生用户在课堂或者课下记录笔记。
@@ -332,6 +327,7 @@
     \end{enumerate}
     \subsubsection{输出}
 	  保存已记录的笔记，同步。
+
   \subsection{R.FUNC.BB.019 学习笔记课件修改}
     \subsubsection{介绍}
 	   学生用户在老师上传的课件上使用文本框或者画图功能添加批注笔记。
@@ -389,7 +385,7 @@
 
 \section{外部接口需求}
   \subsection{用户接口}
-  界面支持多尺寸手机屏幕，操作系统支持IOS10，Android6.0版本，可向下兼容。\par
+  界面支持多尺寸手机屏幕，操作系统支持IOS10，Android6.0版本，可向下兼容。\\
   以IOS界面，学生端口为例，分为用户登录，日程显示，作业实验查询，讨论区，笔记等部分。
     \subsubsection{R.HW.INTF.BB.001 登录}
     \begin{figure}[H]
@@ -408,13 +404,13 @@
     \subfigure[日程显示]{
     \begin{minipage}{7cm}
     \centering
-    \includegraphics[width=10cm]{ddl}
+    \includegraphics[width=7cm]{ddl}
     \end{minipage}
     }
     \subfigure[菜单栏]{
     \begin{minipage}{7cm}
     \centering
-    \includegraphics[width=10cm]{menu}
+    \includegraphics[width=7cm]{menu}
     \end{minipage}
     }
     \caption{}
@@ -442,15 +438,15 @@
   \item 查找框：按用户输入关键词搜索
   \item 点击标题：进入作业或实验的具体页面
   \item 菜单按钮：查看功能菜单
+  \item DDL：点击跳转到实验日期的日历显示界面
+  \item 实验资料下载：下载本次实验的试验资料
+  \item 提交实验报告：上传本地的实验报告
+  \end{itemize}
   \begin{figure}[H]
   \centering
   \includegraphics[width=10cm]{experiment_detail}
   \caption{实验详情}
   \end{figure}
-  \item DDL：点击跳转到实验日期的日历显示界面
-  \item 实验资料下载：下载本次实验的试验资料
-  \item 提交实验报告：上传本地的实验报告
-  \end{itemize}
   \subsubsection{R.HW.INTF.BB.004 讨论区}
     \begin{figure}[H]
     \centering
@@ -477,24 +473,24 @@
 
   \subsection{软件接口}
     \subsubsection{R.SW.INTF.BB.001 数据库}
-	   \begin{center}\begin{description}
+	   \begin{description}
       \item[名称] Mysql数据库
       \item[助记符] Mysql
       \item[版本号]5.7.18
 	     \item[来源] GPL
 	      \item[接口] Database、Table相关操作和权限接口
-	     \end{description}\end{center}
+	     \end{description}
 
     \subsubsection{R.SW.INTF.BB.002 服务器系统}
-	   \begin{center}\begin{description}
-      \item[名称] Debian Linux
-      \item[助记符] Linux
-      \item[版本号] Debian 8: 8.4 released
-	     \item[来源] GPL
-	      \item[接口] 服务器系统管理员权限和操作
-	   \end{description}\end{center}
+    \begin{description}
+      \item[名称] Debian Linux
+      \item[助记符] Linux
+      \item[版本号] Debian 8.8.4 released
+      \item[来源] GPL
+      \item[接口] 服务器系统管理员权限和操作
+    \end{description}
 
-     \subsection{R.SW.INTF.BB.003 硬件接口}
+     \subsection{硬件接口}
      \subsubsection{Android系统}
 	    \begin{center}\begin{description}
       \item[名称] Android操作系统
@@ -504,13 +500,13 @@
 	\item[接口] App开发软件接口，硬件支持
 	\end{description}\end{center}
 
-    \subsubsection{R.SW.INTF.BB.004 iOS系统}
+    \subsubsection{iOS系统}
 	\begin{center}\begin{description}
       \item[名称] iOS操作系统
       \item[助记符] iOS
       \item[版本号] iOS 10
-	\item[来源] Apple
-	\item[接口] App开发软件接口，硬件支持
+	    \item[来源] Apple
+	    \item[接口] App开发软件接口，硬件支持
 	\end{description}\end{center}
 
   \subsection{通讯接口}
