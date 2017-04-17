@@ -2,22 +2,18 @@
   \section{功能需求}
     \subsection{R.FUNC.BB.001 用户登陆}
     \subsubsection{介绍}
-	用户在IOS、Android、Web Browse输入账号和密码登录对应账户。
-登录成功后自动与服务器同步用户数据。
+    用户在IOS、Android、Web Browse输入账号和密码登录对应账户。登录成功后自动与服务器同步用户数据。
     \subsubsection{输入}
     用户输入邮箱或学号信息与密码，点击登陆。
     \subsubsection{处理和输出}
-    A. 客户端联网查询账号与密码是否匹配，匹配成功完成登录。
-
-    B. 登录成功后，进行数据同步。
-
-    C. 若不匹配则提醒不匹配，请重新输入。
-
-    D. 密码为空，提示密码不得为空
-
-    E. 账户格式错误，提示请输出正确的账号
-
-    F. 连接超时，提示请检查网络连接
+    \begin{itemize}
+      \item 客户端联网查询账号与密码是否匹配，匹配成功完成登录。
+      \item 登录成功后，进行数据同步。
+      \item 若不匹配则提醒不匹配，请重新输入。
+      \item 密码为空，提示密码不得为空
+      \item 账户格式错误，提示请输出正确的账号
+      \item 连接超时，提示请检查网络连接
+    \end{itemize}
 
 \subsection{R.FUNC.BB.002 作业/实验查询}
       \subsubsection{介绍}
@@ -45,7 +41,7 @@
       \subsubsection{介绍}
       作业/实验/通知发布仅供教师端和管理人员使用。可以用于教师发布自己负责课程相关的作业、实验或通知。
       \subsubsection{输入}
-      发布首先要新建条目（某次作业或通知等），之后输入相应发布的信息。
+      发布首先要新建条目（某次作业或通知等），之后输入相应发布的信息。\\
       输入数据内容如下：
       \begin{itemize}
         \item 作业/实验/通知的名称。
@@ -66,9 +62,10 @@
       \subsubsection{介绍}
       仅供教师和管理人员使用。用于修改或删除已发布的作业/实验/通知。
       \subsubsection{输入}
-	\begin{enumerate}
-      \item 输入为准备修改的作业等的名称。进入发布界面后，输入要修改的内容或选择删除该作业、通知等。
-	\item 若选择发布实验，则需要选择单人完成还是团队完成（实验可用git进行版本控制）。
+	    \begin{itemize}
+        \item 输入为准备修改的作业等的名称。进入发布界面后，输入要修改的内容或选择删除该作业、通知等。
+	      \item 若选择发布实验，则需要选择单人完成还是团队完成（实验可用git进行版本控制）。
+      \end{itemize}
       \subsubsection{处理}
       \begin{enumerate}
         \item 连接服务器，检查查询相应的权限。
@@ -108,44 +105,44 @@
       \subsubsection{介绍}
       仅供教师端使用。作业/实验查看与批改用与教师查看学生相应的作业或实验。
       \subsubsection{输入}
-	A. 教师选择相应的作业，可选择将本次作业全部下载到本地或在线查看。
+      \begin{itemize}
+        \item 教师选择相应的作业，可选择将本次作业全部下载到本地或在线查看。
+        \item 教师选择要查看/批改作业学生的名称或学号。
+      \end{itemize}
+	    \subsubsection{处理}
+      \begin{enumerate}
+        \item 检查相应的权限。
+        \item 对要查询的作业进行查重。
+        \item 将相应数据发送至客户端。
+      \end{enumerate}
+	    \subsubsection{输出}
+      \begin{itemize}
+        \item 客户端可看到学生的作业，及作业重复率比较高的同学名单。
+        \item 教师可对学生作业进行批改，进入成绩录入的部分。
+      \end{itemize}
 
-	B. 教师选择要查看/批改作业学生的名称或学号。
-
-	\subsubsection{处理}
-	A. 检查相应的权限。
-
-	B. 对要查询的作业进行查重。
-
-	C. 将相应数据发送至客户端。
-
-	\subsubsection{输出}
-	A. 客户端可看到学生的作业，及作业重复率比较高的同学名单。
-
-	B. 教师可对学生作业进行批改，进入成绩录入的部分。
-
-  \subsection{R.FUNC.BB.007 成绩录入}
-    \subsubsection{介绍}
-    成绩输入仅供教师端使用。可以用于登记考试/作业等等的成绩。
-    \subsubsection{输入}
-    输入时首先要新建条目（某次考试或者作业等），之后再相应的输入各学生成绩数据。输入有以下几种方式：
-    \begin{itemize}
-      \item 从文件中读取输入，系统支持从文件中导入成绩，具体导入格式如下所示
-      \begin{lstlisting}[caption=文件导入成绩示例, label={code:import_grade_from_file}]
-      #学号，成绩以','分隔，每行一条记录。
-      #例：
-      张三，96
-      李四，90
-      \end{lstlisting}
-      \item 通过客户端逐条进行输入
-      \item 导入作业批改系统自动生成的成绩
-    \end{itemize}
-    输入数据要求如下：
-    \begin{itemize}
-      \item 学号必须是登记注册为本课程的学生的有效学号，否则进行报错。
-      \item 成绩为整数，如果含有小数按四舍五入进行舍入。
-      \item 默认成绩的范围为[0,100]，超过此范围进行警告并且自动取最接近的可行值。可以通过自定义设置进行调整。
-    \end{itemize}
+    \subsection{R.FUNC.BB.007 成绩录入}
+      \subsubsection{介绍}
+      成绩输入仅供教师端使用。可以用于登记考试/作业等等的成绩。
+      \subsubsection{输入}
+      输入时首先要新建条目（某次考试或者作业等），之后再相应的输入各学生成绩数据。输入有以下几种方式：
+      \begin{itemize}
+        \item 从文件中读取输入，系统支持从文件中导入成绩，具体导入格式如下所示
+        \begin{lstlisting}[caption=文件导入成绩示例, label={code:import_grade_from_file}]
+        #学号，成绩以','分隔，每行一条记录。
+        #例：
+        张三，96
+        李四，90
+        \end{lstlisting}
+        \item 通过客户端逐条进行输入
+        \item 导入作业批改系统自动生成的成绩
+      \end{itemize}
+      输入数据要求如下：
+      \begin{itemize}
+        \item 学号必须是登记注册为本课程的学生的有效学号，否则进行报错。
+        \item 成绩为整数，如果含有小数按四舍五入进行舍入。
+        \item 默认成绩的范围为[0,100]，超过此范围进行警告并且自动取最接近的可行值。可以通过自定义设置进行调整。
+      \end{itemize}
     \subsubsection{处理}
     \begin{enumerate}
       \item 按照默认规则和用户自定义的规则生成相关的约束对于输入数据的有效性进行验证。如果含有出错首先按照默认处理逻辑处理并且给出警告.
@@ -322,99 +319,120 @@
 
  \subsection{R.FUNC.BB.018 学习笔记文本添加}
     \subsubsection{介绍}
-	学生用户在课堂或者课下记录笔记。
+    学生用户在课堂或者课下记录笔记。
     \subsubsection{输入}
-	用户选择创建新的笔记或者修改已经存在的笔记，进入文本编辑界面进行，
-编辑完成后点击保存到本地或者上传，点击返回键退出。
+    用户选择创建新的笔记或者修改已经存在的笔记，进入文本编辑界面进行,编辑完成后点击保存到本地或者上传，点击返回键退出。
     \subsubsection{处理}
-	A. 记录笔记创建的课程名称。
-
-	B. 记录笔记创建的时间，和最后一次进行编辑的时间。
-
-	C. 点击保存到本地之后，保存笔记内容，并写入本地存储器。
-
-	D. 点击上传，保存笔记内容，上传到服务器。
-
-	E. 点击返回键，不保存返回上一层。
+    \begin{enumerate}
+      \item 记录笔记创建的课程名称。
+      \item 记录笔记创建的时间，和最后一次进行编辑的时间。
+      \item 点击保存到本地之后，保存笔记内容，并写入本地存储器。
+      \item 点击上传，保存笔记内容，上传到服务器。
+      \item 点击返回键，不保存返回上一层。
+    \end{enumerate}
     \subsubsection{输出}
-	保存已记录的笔记，同步。
- \subsection{R.FUNC.BB.019 学习笔记课件修改}
+	  保存已记录的笔记，同步。
+  \subsection{R.FUNC.BB.019 学习笔记课件修改}
     \subsubsection{介绍}
-	学生用户在老师上传的课件上使用文本框或者画图功能添加批注笔记。
+	   学生用户在老师上传的课件上使用文本框或者画图功能添加批注笔记。
     \subsubsection{输入}
-	用户在编辑阶段，点击添加画图或文本框。
+	   用户在编辑阶段，点击添加画图或文本框。
     \subsubsection{处理}
-	A. 添加画图，在课件编辑界面进行画图，结束之后保存更改后的课件。
-
-	B. 添加文本框，进入文本编辑界面输入文本框，并插入到课件中用户指定位置上。
+    \begin{enumerate}
+      \item 添加画图，在课件编辑界面进行画图，结束之后保存更改后的课件。
+      \item 添加文本框，进入文本编辑界面输入文本框，并插入到课件中用户指定位置上。
+    \end{enumerate}
     \subsubsection{输出}
-	用户在课程课件上添加笔记或画图。
+	   用户在课程课件上添加笔记或画图。
 
  \subsection{R.FUNC.BB.020 学习笔记搜索}
     \subsubsection{介绍}
-	对笔记（文本模块和课件模块）进行检索，
-可根据创建时间，修改时间，课程，文本进行搜索。
+	   对笔记（文本模块和课件模块）进行检索，可根据创建时间，修改时间，课程，文本进行搜索。
     \subsubsection{输入}
-	用户点击搜索按钮，输入关键字
+	   用户点击搜索按钮，输入关键字
     \subsubsection{处理和输出}
-	根据用户输入的搜索关键字进行搜索，结果按照时间，课程，文本可选分类显示
-无搜索结果则显示无结果
+    \begin{itemize}
+      \item 根据用户输入的搜索关键字进行搜索，结果按照时间，课程，文本可选分类显示
+      \item 无搜索结果则显示无结果
+    \end{itemize}
 
  \subsection{R.FUNC.BB.021 学习笔记删除}
     \subsubsection{介绍}
-	删除某一笔记
+	   删除某一笔记
     \subsubsection{输入}
-	用户长按笔记，点击删除按钮，删除云端保存的笔记。
+	   用户长按笔记，点击删除按钮，删除云端保存的笔记。
     \subsubsection{处理与输出}
-	对用户点击笔记进行删除，并进行数据同步，输出删除成功。
-
+	   对用户点击笔记进行删除，并进行数据同步，输出删除成功。
 
  \subsection{R.FUNC.BB.022 学习笔记导出}
     \subsubsection{介绍}
-	对用户的文本笔记和做过笔记的课件进行导出。
+	   对用户的文本笔记和做过笔记的课件进行导出。
     \subsubsection{输入}
-	用户点击导出按钮，并选择导出格式和保存目录。
+	   用户点击导出按钮，并选择导出格式和保存目录。
     \subsubsection{处理和输出}
-	A. 连接服务器，将用户的请求数据处理打包发送到用户端。
-
-	B. 按照制定格式和目录保存。
-
-	C.若连接服务器超时，则提示超时，重新导出。
+    \begin{enumerate}
+      \item 连接服务器，将用户的请求数据处理打包发送到用户端。
+      \item 按照制定格式和目录保存。
+      \item 若连接服务器超时，则提示超时，重新导出。
+    \end{enumerate}
 
  \subsection{R.FUNC.BB.023 学习笔记共享}
     \subsubsection{介绍}
-	用户与其他用户共享学习笔记。
+	   用户与其他用户共享学习笔记。
     \subsubsection{输入}
-	用户勾选想要与同课程下其他用户共享的笔记，点击共享。
+	   用户勾选想要与同课程下其他用户共享的笔记，点击共享。
     \subsubsection{处理和输出}
-	A. 连接服务器，更改所选笔记的访问权限，并显示共享成功
-
-	B. 若连接服务器超时，则提示超时，重新共享
+    \begin{enumerate}
+      \item 连接服务器，更改所选笔记的访问权限，并显示共享成功
+      \item 若连接服务器超时，则提示超时，重新共享
+    \end{enumerate}
 
 \section{外部接口需求}
   \subsection{用户接口}
-  界面支持多尺寸手机屏幕，web端支持使用IE、Safari、chrome、Firefox浏览器
-以IOS界面为例，分为用户登录，日程显示，作业实验查询，讨论区，笔记等部分。
+  界面支持多尺寸手机屏幕，web端支持使用IE、Safari、chrome、Firefox浏览器。\par
+  以IOS界面为例，分为用户登录，日程显示，作业实验查询，讨论区，笔记等部分。
     \subsubsection{R.HW.INTF.BB.001 登录}
-    用户登录.png
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{login}
+    \caption{登陆界面}
+    \end{figure}
     \begin{itemize}
-  \item 账号：填写科大邮箱或者学号
-  \item 密码：填写密码
-  \item 登录按钮：点击登录
-  \end{itemize}
+      \item 账号：填写科大邮箱或者学号
+      \item 密码：填写密码
+      \item 登录按钮：点击登录
+    \end{itemize}
     \subsubsection{R.HW.INTF.BB.002 日程日历化显示}
-    ddl.png
-    菜单.png
+    \begin{figure}[H]
+    \centering
+    \subfigure[日程显示]{
+    \begin{minipage}{7cm}
+    \centering
+    \includegraphics[width=10cm]{ddl}
+    \end{minipage}
+    }
+    \subfigure[菜单栏]{
+    \begin{minipage}{7cm}
+    \centering
+    \includegraphics[width=10cm]{menu}
+    \end{minipage}
+    }
+    \caption{}
+    \end{figure}
     \begin{itemize}
-  \item +按钮：新建日程
-  \item 今天：显示今天待提交的实验或作业
-  \item 日历：显示日历
-  \item 筛选：按指定规则筛选时间
-  \item 点击日程标题：进入作业或实验的具体页面
-  \item 菜单页面：点击选择功能
-  \end{itemize}
+      \item +按钮：新建日程
+      \item 今天：显示今天待提交的实验或作业
+      \item 日历：显示日历
+      \item 筛选：按指定规则筛选时间
+      \item 点击日程标题：进入作业或实验的具体页面
+      \item 菜单页面：点击选择功能
+    \end{itemize}
     \subsubsection{R.HW.INTF.BB.003 作业实验查询}
-    实验.png
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{experiment_list}
+    \caption{实验列表}
+    \end{figure}
     \begin{itemize}
   \item  排序方式按钮：选择排序方式
   \item -未完成：显示所有未完成任务
@@ -424,51 +442,61 @@
   \item 查找框：按用户输入关键词搜索
   \item 点击标题：进入作业或实验的具体页面
   \item 菜单按钮：查看功能菜单
-  实验2.png
+  \begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{experiment_detail}
+  \caption{实验详情}
+  \end{figure}
   \item DDL：点击跳转到实验日期的日历显示界面
   \item 实验资料下载：下载本次实验的试验资料
   \item 提交实验报告：上传本地的实验报告
-    \subsubsection{R.HW.INTF.BB.004 讨论区}
-    \end{itemize}
-    讨论区.png
-    \begin{itemize}
+  \end{itemize}
+  \subsubsection{R.HW.INTF.BB.004 讨论区}
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{Discussion}
+    \caption{讨论区}
+    \end{figure}
+  \begin{itemize}
   \item 分享：将课程讨论区分享给其他用户或其他软件
   \item 添加讨论：发布新的主题
   \item 排序方式：选择不同的排序方式
   \item 点击讨论主题标题：进入讨论主题详情
   \end{itemize}
-    \subsubsection{R.HW.INTF.BB.005 笔记}
-    笔记编写.png
-    \begin{itemize}
+  \subsubsection{R.HW.INTF.BB.005 笔记}
+  \begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{CreateNote}
+  \caption{笔记编写}
+  \end{figure}
+  \begin{itemize}
   \item 返回按钮：退出编辑，返回上一级，不保存
   \item 笔记编写：键盘输入编写内容
   \item $\surd$ ：编写玩笔记，保存并返回
   \end{itemize}
 
-
   \subsection{软件接口}
-
     \subsubsection{R.SW.INTF.BB.001 数据库}
-	\begin{center}\begin{description}
+	   \begin{center}\begin{description}
       \item[名称] Mysql数据库
       \item[助记符] Mysql
       \item[版本号]5.7.18
-	\item[来源] GPL
-	\item[接口] Database、Table相关操作和权限接口
-	\end{description}\end{center}
+	     \item[来源] GPL
+	      \item[接口] Database、Table相关操作和权限接口
+	     \end{description}\end{center}
 
     \subsubsection{R.SW.INTF.BB.002 服务器系统}
-	\begin{center}\begin{description}
+	   \begin{center}\begin{description}
       \item[名称] macOS Sierra
       \item[助记符] OS
       \item[版本号] macOS Sierra 10.12.3
-	\item[来源] GPL
-	\item[接口] 服务器系统管理员权限和操作
-	\end{description}\end{center}
+	     \item[来源] GPL
+	      \item[接口] 服务器系统管理员权限和操作
+	   \end{description}\end{center}
 
-  \subsection{R.SW.INTF.BB.003 硬件接口}
-    \subsubsection{Android系统}
-	\begin{center}\begin{description}
+     \subsection{R.SW.INTF.BB.003 硬件接口}
+     \subsubsection{Android系统}
+	    \begin{center}\begin{description}
       \item[名称] Android操作系统
       \item[助记符] Android
       \item[版本号]

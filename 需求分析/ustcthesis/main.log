@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.15)  17 APR 2017 18:27
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.15)  17 APR 2017 20:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1927,10 +1927,30 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks47
 \@floatcapt=\box84
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip93
+\subfigcapskip=\skip94
+\subfigcaptopadj=\dimen335
+\subfigbottomskip=\skip95
+\subfigcapmargin=\dimen336
+\subfiglabelskip=\skip96
+\c@subfigure=\count281
+\c@lofdepth=\count282
+\c@subtable=\count283
+\c@lotdepth=\count284
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip97
+\subfig@bottom=\skip98
+)
 (/usr/local/texlive/2016/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2016/05/14 v3.4.0 xeCJK patch file for listings
-\l__xeCJK_listings_max_char_int=\count281
-\l__xeCJK_listings_flag_int=\count282
+\l__xeCJK_listings_max_char_int=\count285
+\l__xeCJK_listings_flag_int=\count286
 )
 
 LaTeX Warning: Unused global option(s):
@@ -1939,37 +1959,37 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 26.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 28.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 26.
+LaTeX Info: Redefining \selectfont on input line 28.
 \AtBeginShipoutBox=\box85
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 28.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1977,11 +1997,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count283
+\c@section@level=\count287
 )
-LaTeX Info: Redefining \ref on input line 26.
-LaTeX Info: Redefining \pageref on input line 26.
-LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -2031,14 +2051,15 @@ Package caption Info: longtable package is loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
+Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count284
-LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+\c@lstlisting=\count288
+LaTeX Font Info:    Try loading font information for U+msa on input line 39.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+LaTeX Font Info:    Try loading font information for U+msb on input line 39.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2052,7 +2073,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 * 
 * Font 'FandolHei-Regular' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_FandolHei-Regular_int=\count285
+\g__fontspec_family_FandolHei-Regular_int=\count289
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -2159,14 +2180,14 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 [12]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 140.
+nput line 131.
 
 *************************************************
 * fontspec warning: "script-not-exist"
 * 
 * Font 'FandolFang-Regular' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_FandolFang-Regular_int=\count286
+\g__fontspec_family_FandolFang-Regular_int=\count290
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -2224,10 +2245,25 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
 [23]
+File: figures/login.png Graphic file (type QTm)
+ <use  "figures/login.png" >
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
 [24]
+File: figures/ddl.png Graphic file (type QTm)
+ <use  "figures/ddl.png" >
+Overfull \hbox (85.35828pt too wide) in paragraph at lines 412--412
+[][] 
+ []
+
+File: figures/menu.png Graphic file (type QTm)
+<use  "figures/menu.png" >
+Overfull \hbox (85.35828pt too wide) in paragraph at lines 417--417
+[][] 
+ []
+
+
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
@@ -2235,41 +2271,49 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[26]) (./chapters/design_constraint_own.tex
+[26]
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
 [27]
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[28]) (./chapters/design_constraint_own.tex
+Overfull \vbox (7.11859pt too high) has occurred while \output is active []
+
+
+[29]
 第4章
 
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[28
+[30
 
 ]) (./chapters/quality_characteristics_own.tex
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[29]
+[31]
 第5章
 ) (./chapters/others_own.tex
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[30
+[32
 
 ]
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[31]
+[33]
 第6章
 ) (./chapters/dependency.tex
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[32
+[34
 
 ]
 第7章
@@ -2277,7 +2321,7 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[33
+[35
 
 ]
 第8章
@@ -2285,7 +2329,7 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[34
+[36
 
 ]
 第9章
@@ -2298,7 +2342,7 @@ Overfull \hbox (23.8567pt too wide) in paragraph at lines 5--22
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[35
+[37
 
 ]
 
@@ -2308,7 +2352,7 @@ Package natbib Warning: Empty `thebibliography' environment on input line 10.
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[36
+[38
 
 
 ]) (./chapters/appendixA.tex
@@ -2317,7 +2361,7 @@ Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[37
+[39
 
 
 ]
@@ -2338,7 +2382,7 @@ Overfull \hbox (9.67381pt too wide) in paragraph at lines 14--15
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[38
+[40
 
 ]
 File: figures/level1_学习笔记.pdf Graphic file (type QTm)
@@ -2357,7 +2401,7 @@ Overfull \hbox (9.67381pt too wide) in paragraph at lines 26--27
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[39]
+[41]
 File: figures/level1_用户管理.pdf Graphic file (type QTm)
  <use  "figures/level1_用户管理.pdf" >
 Overfull \hbox (9.67381pt too wide) in paragraph at lines 32--33
@@ -2368,7 +2412,7 @@ Overfull \hbox (9.67381pt too wide) in paragraph at lines 32--33
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[40]
+[42]
 File: figures/level1_讨论区.pdf Graphic file (type QTm)
  <use  "figures/level1_讨论区.pdf" >
 Overfull \hbox (9.67381pt too wide) in paragraph at lines 38--39
@@ -2379,7 +2423,7 @@ Overfull \hbox (9.67381pt too wide) in paragraph at lines 38--39
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[41]
+[43]
 File: figures/level1_资源共享.pdf Graphic file (type QTm)
  <use  "figures/level1_资源共享.pdf" >
 Overfull \hbox (9.67381pt too wide) in paragraph at lines 44--45
@@ -2396,29 +2440,29 @@ Overfull \hbox (9.67381pt too wide) in paragraph at lines 50--51
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[42]
+[44]
 Overfull \vbox (7.11859pt too high) has occurred while \output is active []
 
 
-[43]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
+[45]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 76.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 76.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 78.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 41849 strings out of 493591
- 817961 string characters out of 6143546
- 812035 words of memory out of 5000000
- 44616 multiletter control sequences out of 15000+600000
+ 42003 strings out of 493591
+ 820368 string characters out of 6143546
+ 813989 words of memory out of 5000000
+ 44753 multiletter control sequences out of 15000+600000
  17244 words of font info for 121 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 69i,8n,79p,10490b,4332s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,9n,79p,10490b,4520s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (45 pages).
+Output written on main.pdf (47 pages).

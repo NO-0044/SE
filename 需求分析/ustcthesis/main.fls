@@ -293,6 +293,10 @@ INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.cfg
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.cfg
 INPUT /usr/local/texlive/2016/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 INPUT main.aux
@@ -380,6 +384,9 @@ INPUT chapters/overview_own.tex
 INPUT chapters/overview_own.tex
 INPUT chapters/concrete_requirement_own.tex
 INPUT chapters/concrete_requirement_own.tex
+INPUT figures/login.png
+INPUT figures/ddl.png
+INPUT figures/menu.png
 INPUT chapters/design_constraint_own.tex
 INPUT chapters/design_constraint_own.tex
 INPUT chapters/quality_characteristics_own.tex
