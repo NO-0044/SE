@@ -387,6 +387,10 @@ INPUT chapters/concrete_requirement_own.tex
 INPUT figures/login.png
 INPUT figures/ddl.png
 INPUT figures/menu.png
+INPUT figures/experiment_list.png
+INPUT figures/experiment_detail.png
+INPUT figures/Discussion.png
+INPUT figures/CreateNote.png
 INPUT chapters/design_constraint_own.tex
 INPUT chapters/design_constraint_own.tex
 INPUT chapters/quality_characteristics_own.tex
@@ -407,6 +411,7 @@ INPUT chapters/appendixB_own.tex
 INPUT chapters/appendixB_own.tex
 INPUT figures/Level_0.pdf
 INPUT figures/level1_日程管理.pdf
+INPUT figures/level1_作业.pdf
 INPUT figures/level1_学习笔记.pdf
 INPUT figures/level1_成绩管理.pdf
 INPUT figures/level1_用户管理.pdf
