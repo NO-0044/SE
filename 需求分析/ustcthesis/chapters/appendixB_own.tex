@@ -164,23 +164,65 @@
 
 
 \subsection{数据存储说明}
-\subsubsection{数据存储1名称}
-<Title of  the data flow should accord with the one in data flow diagram, and the Data description notions should be used. The arrangement of the data in data store should also be described.>
+\subsubsection{数据库发布作业/实验/通知存储}
+简述： 服务器数据库存放教师发布的作业/实验/通知
 
-与数据流图中的名称一致，采用数据描述符号说明数据流的内容，另外还需描述数据排列方式
+数据排列： 数据存在多个lable，主要的主键有发布课程编号，类型，作业号。其列名还有内容，截至日期，附件地址等。
 
-\subsubsection{数据存储2名称}
-<Title of  the data flow should accord with the one in data flow diagram, and the Data description notions should be used.The arrangement of the data in data store should also be described.>
+\subsubsection{作业附件存储}
+简述： 服务器存放教师发布的作业/实验材料
 
-与数据流图中的名称一致，采用数据描述符号说明数据流的内容，另外还需描述数据排列方式
+数据排列： 不同的科目有不同的文件夹，存放到相应的文件夹下。将地址存入数据库相应的部分。
+
+\subsubsection{学生提交作业/实验存储}
+简述： 服务器存放学生上传的作业/实验。
+
+数据排列：数据库的主键为作业号。其列名还有学生学号，名称，作业/实验提交与否，地址。
+将学生提交的内容存入服务器的文件夹下，地址放入上述服务器。
+
+若使用git提交，则同样保存按照git服务器保存在服务器上。
+
+\subsubsection{用户账号数据库存储}
+\item简述：服务器端数据库存储用户的邮箱，学号，姓名，密码，用户权限，选修课程，课程详情等基本信息
+\item数据排列：数据存在多个table，以用户邮箱，学生姓名，课程名称为主键，数据按主键排列
+
+\subsubsection{笔记数据库存储}
+\item简述：存储在服务器数据库中的用户信息，笔记内容，笔记创建时间，相关学科等信息
+\item数据排列：数据存在多个table，数据以用户账户，笔记学科为主键，笔记按主键排列。
+
+\subsubsection{笔记数据库本地存储}
+\item简述：存储在客户端数据库中的笔记内容，笔记创建时间，相关学科等信息
+\item数据排列：数据存在多个table，数据以笔记创建时间，笔记学科为主键，笔记按主键排列。
 
 \subsection{加工说明}
-\subsubsection{加工1名称}
-<Use natural language, Decision table/Decision tree and Pseudocode to describe how to process the data flow>
+\subsubsection{发布作业/实验/通知}
+用户将作业/实验/通知填写好发送。
 
-采用自然语言，判断表/判断树，伪码的形式描述对数据流进行处理的过程
+服务器判断用户发来的数据，将附件存入相应空间，将其他内容存入数据库中。
 
-\subsubsection{加工2名称}
-<Use natural language, Decision table/Decision tree and Pseudocode to describe how to process the data flow>
+向客户端发送成功与否的信息。
 
-采用自然语言，判断表/判断树，伪码的形式描述对数据流进行处理的过程
+\subsubsection{学生提交作业/实验}
+学生将作业/实验内容从本地提交。
+
+服务器接受消息，更新数据库，并将收到的文件存储。
+
+向客户端发送结果信息。
+
+\subsubsection{处理登录}
+客户端发送查询请求到服务器用户数据库，匹配该用户邮箱或学号和密码，匹配成功则返回成功登录的信息，并同步数据。匹配失败则返回失败信息，并显示账户不存在或密码错误。
+
+\subsubsection{处理新用户请求}
+客户端发送新建请求到服务器数据库，检查是否为新用户，若可创建则返回允许创建信息，失败则返回无法创建新用户。
+
+\subsubsection{处理笔记}
+对笔记请求数据处理，分发给下一级功能区具体处理
+
+\subsubsection{创建笔记}
+创建新的笔记，创建成功则将新的笔记按用户选择存入本地存储，或存入服务器。
+
+\subsubsection{删除笔记}
+删除云端或者本地存储的笔记，返回操作结果。
+
+\subsubsection{处理查询}
+从本地存储和服务器存储的的数据文件进行搜索，对于符合关键字的搜索返回给用户，如果没有结果则显示无结果。
