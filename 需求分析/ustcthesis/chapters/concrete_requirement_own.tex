@@ -1,6 +1,25 @@
 \chapter{具体需求}
   \section{功能需求}
-    \subsection{xxx1.1 作业/实验查询}
+    \subsection{R.FUNC.BB.001 用户登陆}
+    \subsubsection{介绍}
+	用户在IOS、Android、Web Browse输入账号和密码登录对应账户。
+登录成功后自动与服务器同步用户数据。
+    \subsubsection{输入}
+    用户输入邮箱或学号信息与密码，点击登陆。
+    \subsubsection{处理和输出}
+    A. 客户端联网查询账号与密码是否匹配，匹配成功完成登录。
+
+    B. 登录成功后，进行数据同步。
+
+    C. 若不匹配则提醒不匹配，请重新输入。
+
+    D. 密码为空，提示密码不得为空
+
+    E. 账户格式错误，提示请输出正确的账号
+
+    F. 连接超时，提示请检查网络连接
+
+\subsection{R.FUNC.BB.002 作业/实验查询}
       \subsubsection{介绍}
       作业/实验查询用于查询作业/实验情况。学生可以查到本人相关课程的作业情况。教师可以查询相应班级所有学生每次作业的提交情况。教学管理人员可以查询到自己所负责所有学生相应的作业提交情况。
       \subsubsection{输入}
@@ -22,7 +41,7 @@
         \item 学生端更新相应的日程。
       \end{itemize}
 
-    \subsection{xxx1.2 作业/实验/通知发布}
+    \subsection{R.FUNC.BB.003 作业/实验/通知发布}
       \subsubsection{介绍}
       作业/实验/通知发布仅供教师端和管理人员使用。可以用于教师发布自己负责课程相关的作业、实验或通知。
       \subsubsection{输入}
@@ -43,7 +62,7 @@
       \subsubsection{输出}
       相关数据存入服务器，客户端提示发布成功或其他异常信息。
 
-    \subsection{xxx.3 作业/实验/通知修改删除}
+    \subsection{R.FUNC.BB.004 作业/实验/通知修改删除}
       \subsubsection{介绍}
       仅供教师和管理人员使用。用于修改或删除已发布的作业/实验/通知。
       \subsubsection{输入}
@@ -57,7 +76,7 @@
       \subsubsection{输出}
       在客户端上显示更新后的结果。
 
-    \subsection{xxx.4 作业/实验/通知提交}
+    \subsection{R.FUNC.BB.005 作业/实验/通知提交}
       \subsubsection{介绍}
       仅供学生使用。学生提交完成的作业、实验或需要提交材料的通知。
       \subsubsection{输入}
@@ -82,7 +101,7 @@
         \item 上传成功则作业完成状况标示为已完成，并更新相应的日程。
       \end{itemize}
 
-    \subsection{xxx.5 作业/实验查看与批改}
+    \subsection{R.FUNC.BB.006 作业/实验查看与批改}
       \subsubsection{介绍}
       仅供教师端使用。作业/实验查看与批改用与教师查看学生相应的作业或实验。
       \subsubsection{输入}
@@ -111,7 +130,7 @@ B. 该生的本次作业情况更新为已批改。
 
 C. 显示待批改作业份数。
 
-  \subsection{001.1 成绩录入}
+  \subsection{R.FUNC.BB.007 成绩录入}
     \subsubsection{介绍}
     成绩输入仅供教师端使用。可以用于登记考试/作业等等的成绩。
     \subsubsection{输入}
@@ -142,7 +161,7 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
     数据最终存入后端的数据库中。
 
-  \subsection{001.2 成绩查询}
+  \subsection{R.FUNC.BB.008 成绩查询}
     \subsubsection{介绍}
     成绩查询用于查询已经录入的成绩。学生可以查到本人相应课程的所有成绩。老师可以查到相应班级所有同学的成绩。教学管理人员可以查询自己所负责所有学生的相应成绩。
     \subsubsection{输入}
@@ -161,7 +180,7 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
     接受后端数据库传回的数据并显示在客户端上。
 
-  \subsection{001.2 成绩统计和调整}
+  \subsection{R.FUNC.BB.009 成绩统计和调整}
     \subsubsection{介绍}
     成绩统计功能教学管理人员与老师都拥有，成绩调整只有老师有相应的权限。成绩统计可用于老师和教学管理人员了解教学情况以及学生的学业状况。成绩调整可以供老师修订成绩同时也可以方便按照一定的规则对于成绩进行统一调整使得成绩更有一般性并能更好的体现学生的水平。预置部分功能如下：
     \begin{description}
@@ -175,7 +194,7 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
     在客户端中显示结果，同时根据操作类型和用户的选择决定是否需要更新原数据库。
 
-  \subsection{002.1 资源上传}
+  \subsection{R.FUNC.BB.010 资源上传}
     \subsubsection{介绍}
     资源上传可用于教师分享课件等教学辅助材料。同时同学自身也可以分享有用材料。空间分为共享和私有两部分。私有空间可以用作个人文件的托管和同步。
     \subsubsection{输入}
@@ -199,7 +218,7 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
     将数据实际存储入相应服务器，同时反馈操作结果。
 
-  \subsection{002.2 资源下载与浏览}
+  \subsection{R.FUNC.BB.012 资源下载与浏览}
     \subsubsection{介绍}
     资源下载用于获取远端分享的相关资源
     \subsubsection{输入}
@@ -216,7 +235,7 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
     下载存储至本地，浏览输出至相应的客户端。
 
-  \subsection{003.1 新建日程}
+  \subsection{R.FUNC.BB.013 新建日程}
     \subsubsection{介绍}
     本功能用于生成新的日程安排，辅助用户合理安排各项任务
     \subsubsection{输入}
@@ -245,7 +264,7 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
     输出一是存储至本地数据库中同时同步至远端，另外反馈是否成功。
 
-  \subsection{003.2 日程显示与提醒}
+  \subsection{R.FUNC.BB.014 日程显示与提醒}
     \subsubsection{介绍}
     日程提醒显示用于提醒自身的任务安排，合理安排时间。避免遗忘重要事项。
     \subsubsection{输入}
@@ -259,7 +278,7 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
     输出至客户端相应页面，同时可调用铃声系统通知等进行提醒。
 
-  \subsection{004.1 讨论区讨论}
+  \subsection{R.FUNC.BB.015 讨论区讨论}
     \subsubsection{介绍}
     讨论区可以发布新的主题用于进行问题讨论，增强对知识的理解和应用。
     讨论区需要具备以下功能：
@@ -282,7 +301,7 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
     存储至后台数据库中。如果需要广播调用广播接口。
 
-  \subsection{007.1 新建博文}
+  \subsection{R.FUNC.BB.016 新建博文}
     \subsubsection{介绍}
     博文主要用于用户分享学习经验等等认为有意义的东西，相比讨论区更加系统。
     \subsubsection{输入}
@@ -292,7 +311,7 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
     输出存储至后台数据库并反馈是否成功。
 
-  \subsection{005 课程考试排布}
+  \subsection{R.FUNC.BB.017 课程考试排布}
     \subsubsection{介绍}
     课程考试排布功能主要用于辅助教学管理人员合理安排相关活动，减少冲突节约时间。
     \subsubsection{输入}
@@ -306,25 +325,8 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
     生成的课表信息
 
- \subsection{008 用户登陆}
-    \subsubsection{介绍}
-	用户在IOS、Android、Web Browse输入账号和密码登录对应账户。
-登录成功后自动与服务器同步用户数据。
-    \subsubsection{输入}
-    用户输入邮箱或学号信息与密码，点击登陆。
-    \subsubsection{处理和输出}
-    A. 客户端联网查询账号与密码是否匹配，匹配成功完成登录。
 
-    B. 登录成功后，进行数据同步。
-
-    C. 若不匹配则提醒不匹配，请重新输入。
-
-    D. 密码为空，提示密码不得为空
-
-    E. 账户格式错误，提示请输出正确的账号
-
-    F. 连接超时，提示请检查网络连接
- \subsection{009.1 学习笔记文本添加}
+ \subsection{R.FUNC.BB.018 学习笔记文本添加}
     \subsubsection{介绍}
 	学生用户在课堂或者课下记录笔记。
     \subsubsection{输入}
@@ -342,7 +344,7 @@ C. 显示待批改作业份数。
 	E. 点击返回键，不保存返回上一层。
     \subsubsection{输出}
 	保存已记录的笔记，同步。
- \subsection{009.2 学习笔记课件修改}
+ \subsection{R.FUNC.BB.019 学习笔记课件修改}
     \subsubsection{介绍}
 	学生用户在老师上传的课件上使用文本框或者画图功能添加批注笔记。
     \subsubsection{输入}
@@ -354,7 +356,7 @@ C. 显示待批改作业份数。
     \subsubsection{输出}
 	用户在课程课件上添加笔记或画图。
 
- \subsection{009.3 学习笔记搜索}
+ \subsection{R.FUNC.BB.020 学习笔记搜索}
     \subsubsection{介绍}
 	对笔记（文本模块和课件模块）进行检索，
 可根据创建时间，修改时间，课程，文本进行搜索。
@@ -364,7 +366,7 @@ C. 显示待批改作业份数。
 	根据用户输入的搜索关键字进行搜索，结果按照时间，课程，文本可选分类显示
 无搜索结果则显示无结果
 
- \subsection{009.4 学习笔记删除}
+ \subsection{R.FUNC.BB.021 学习笔记删除}
     \subsubsection{介绍}
 	删除某一笔记
     \subsubsection{输入}
@@ -373,7 +375,7 @@ C. 显示待批改作业份数。
 	对用户点击笔记进行删除，并进行数据同步，输出删除成功。
 
 
- \subsection{009.5 学习笔记导出}
+ \subsection{R.FUNC.BB.022 学习笔记导出}
     \subsubsection{介绍}
 	对用户的文本笔记和做过笔记的课件进行导出。
     \subsubsection{输入}
@@ -385,7 +387,7 @@ C. 显示待批改作业份数。
 
 	C.若连接服务器超时，则提示超时，重新导出。
 
- \subsection{009.6 学习笔记共享}
+ \subsection{R.FUNC.BB.023 学习笔记共享}
     \subsubsection{介绍}
 	用户与其他用户共享学习笔记。
     \subsubsection{输入}
@@ -399,14 +401,14 @@ C. 显示待批改作业份数。
   \subsection{用户接口}
   界面支持多尺寸手机屏幕，web端支持使用IE、Safari、chrome、Firefox浏览器
 以IOS界面为例，分为用户登录，日程显示，作业实验查询，讨论区，笔记等部分。
-    \subsubsection{登录}
+    \subsubsection{R.HW.INTF.BB.001 登录}
     #用户登录.png
     \begin{itemize}
   \iterm账号：填写科大邮箱或者学号
   \iterm密码：填写密码
   \iterm登录按钮：点击登录
   \end{itemize}
-    \subsubsection{日程日历化显示}
+    \subsubsection{R.HW.INTF.BB.002 日程日历化显示}
     #ddl.png
     #菜单.png
     \begin{itemize}
@@ -417,7 +419,7 @@ C. 显示待批改作业份数。
   \iterm点击日程标题：进入作业或实验的具体页面
   \iterm菜单页面：点击选择功能
   \end{itemize}
-    \subsubsection{作业实验查询}
+    \subsubsection{R.HW.INTF.BB.003 作业实验查询}
     #实验.png
     \begin{itemize}
   \iterm排序方式按钮：选择排序方式
@@ -432,7 +434,7 @@ C. 显示待批改作业份数。
   \iterm DDL：点击跳转到实验日期的日历显示界面
   \iterm实验资料下载：下载本次实验的试验资料
   \iterm提交实验报告：上传本地的实验报告
-    \subsubsection{讨论区}
+    \subsubsection{R.HW.INTF.BB.004 讨论区}
     \end{itemize}
     #讨论区.png
     \begin{itemize}
@@ -441,7 +443,7 @@ C. 显示待批改作业份数。
   \iterm排序方式：选择不同的排序方式
   \iterm点击讨论主题标题：进入讨论主题详情
   \end{itemize}
-    \subsubsection{笔记}
+    \subsubsection{R.HW.INTF.BB.005 笔记}
     #笔记编写.png
     \begin{itemize}
   \iterm返回按钮：退出编辑，返回上一级，不保存
@@ -452,7 +454,7 @@ C. 显示待批改作业份数。
 
   \subsection{软件接口}
 
-    \subsubsection{数据库}
+    \subsubsection{R.SW.INTF.BB.001 数据库}
 	\begin{center}\begin{description}
       \item[名称] Mysql数据库
       \item[助记符] Mysql
@@ -461,7 +463,7 @@ C. 显示待批改作业份数。
 	\item[接口] Database、Table相关操作和权限接口
 	\end{description}\end{center}
 
-    \subsubsection{服务器系统}
+    \subsubsection{R.SW.INTF.BB.002 服务器系统}
 	\begin{center}\begin{description}
       \item[名称] macOS Sierra
       \item[助记符] OS
@@ -470,7 +472,7 @@ C. 显示待批改作业份数。
 	\item[接口] 服务器系统管理员权限和操作
 	\end{description}\end{center}
 
-  \subsection{硬件接口}
+  \subsection{R.SW.INTF.BB.003 硬件接口}
     \subsubsection{Android系统}
 	\begin{center}\begin{description}
       \item[名称] Android操作系统
@@ -480,7 +482,7 @@ C. 显示待批改作业份数。
 	\item[接口] App开发软件接口，硬件支持
 	\end{description}\end{center}
 
-    \subsubsection{iOS系统}
+    \subsubsection{R.SW.INTF.BB.004 iOS系统}
 	\begin{center}\begin{description}
       \item[名称] iOS操作系统
       \item[助记符] iOS
