@@ -1,0 +1,87 @@
+\chapter{任务概述}
+本系统的目标是实现一个学习教学辅助系统，包括客户端、服务器端两个部分。
+
+客户端面向学生和教职人员用户，为用户提供教学辅导和学习协助。
+
+\section{目标}
+实现教学学习系统，实现需求规格说明书中所描述的在不同平台的通知任务发布、提交，资源共享和信息沟通等功能，并且保证系统的健壮性和数据安全。
+
+\section{开发与运行环境}
+
+\subsection{开发环境的配置}
+\begin{table}[H]
+\centering
+\caption{开发环境的配置} \label{tab:development-environment}
+\begin{tabular}{|c|c|c|}
+    \hline
+    类别 & 标准配置 & 最低配置 \\
+    \hline
+    计算机硬件 & \tabincell{c}{基于x86结构的CPU\\ 主频>=2.4GHz\\ 内存>=8G\\ 硬盘>=200G} & \tabincell{c}{基于x86结构的CPU\\ 主频>=1.6GHz\\ 内存>=512M\\ 硬盘>=2G} \\
+    \hline
+    计算机软件 & \tabincell{c}{Linux (kernel version>=4.10)\\ GNU gcc (version>=6.3.1)} & \tabincell{c}{Linux (kernel version>=3.10)\\ GNU gcc (version>=5.4)} \\
+    \hline
+    网络通信 & \tabincell{c}{至少要有一块可用网卡\\ 能运行IP协议栈即可} & \tabincell{c}{至少要有一块可用网卡\\ 能运行IP协议栈即可} \\
+    \hline
+    其他 & 采用MySQL数据库 & 采用MySQL数据库 \\
+    \hline
+\end{tabular}
+% \note{这里是表的注释}
+\end{table}
+
+\subsection{测试环境的配置}
+\begin{table}[H]
+\centering
+\caption{测试环境的配置} \label{tab:test-environment}
+\begin{tabular}{|c|c|c|}
+    服务器 & Linux (kernel version>=4.10 & Linux (kernel version>=3.10 \\
+    \hline
+    数据库 & MySQL 5.7.12 & MySQL 5.7.12 \\
+    \hline
+    Android设备 & \tabincell{c}{Samsung Galaxy S7\\Android 6.0} & \tabincell{c}{Samsung Galaxy S5\\Android 4.0} \\
+    \hline
+    iOS设备 & \tabincell{c}{iPhone 6s\\iOS 10} &\ tabincell{c}{iPhone 5\\iOS 10}\\
+    \hline
+    浏览器 & Chrome & Chrome\\
+    \hline
+\end{tabular}
+% \note{这里是表的注释}
+\end{table}
+
+\subsection{运行环境的配置}
+\begin{table}[H]
+\centering
+\caption{运行环境的配置} \label{tab:operation-environment}
+\begin{tabular}{|c|c|c|}
+    服务器 & Linux (kernel version>=4.10 & Linux (kernel version>=3.10 \\
+    \hline
+    数据库 & MySQL 5.7.12 & MySQL 5.7.12 \\
+    \hline
+    Android设备 & \tabincell{c}{Samsung Galaxy S7\\Android 6.0} & \tabincell{c}{Samsung Galaxy S5\\Android 4.0} \\
+    \hline
+    iOS设备 & \tabincell{c}{iPhone 6s\\iOS 10} &\ tabincell{c}{iPhone 5\\iOS 10}\\
+    \hline
+    浏览器 & Chrome & Chrome\\
+    \hline
+\end{tabular}
+% \note{这里是表的注释}
+\end{table}
+
+\section{需求概述}
+功能需求包括：
+\begin{itemize}
+  \item 发布作业/实验/通知等
+  \item 回收和批改作业
+  \item 管理成绩
+  \item 教辅资源管理和共享
+  \item 日程管理和提醒
+  \item 讨论区和个人博客管理
+  \item 学习笔记管理
+\end{itemize}
+
+
+\section{条件与限制}
+\begin{description}
+  \item[技术条件] 需要有基本的Android和iOS开发以及数据库管理等知识，需要相关的开发环境和测试运营环境。
+  \item[开发环境] 本项目需要为不同的平台提供支持，考虑到市面上各类设备规格不一为了提升用户体验需要尽可能提升兼容性加大了难度。
+  \item[时间限制] 开发时间有限，较为紧张。
+\end{description}
