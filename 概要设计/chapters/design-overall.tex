@@ -62,10 +62,61 @@ R.FUNC.BB.022   &   学习笔记共享   &   用户与其他用户共享学习�
 
 \section{处理流程}
 \subsection{总体流程}
-此处应当有一个图和对应的描述。
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{Level_0}
+\caption{总体流程}
+\end{figure}
 
 \subsection{系统基本流程}
-此处应当有一个图和对应的描述。
+\subsubsection{日程管理模块}
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{level1_1}
+\caption{日程管理模块流程}
+\end{figure}
+\subsubsection{作业实验模块}
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{level1_2}
+\caption{日程管理模块流程}
+\end{figure}
+\subsubsection{学习笔记模块}
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{level1_3}
+\caption{学习笔记模块流程}
+\end{figure}
+\subsubsection{成绩管理模块}
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{level1_4}
+\caption{成绩管理模块流程}
+\end{figure}
+\subsubsection{用户管理模块}
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{level1_5}
+\caption{用户理模块流程}
+\end{figure}
+\subsubsection{讨论区模块}
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{level1_6}
+\caption{讨论区模块流程}
+\end{figure}
+\subsubsection{资源共享模块}
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{level1_7}
+\caption{资源共享模块流程}
+\end{figure}
+\subsubsection{通知管理模块}
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{level1_8}
+\caption{通知管理模块流程}
+\end{figure}
 
 \subsection{R.FUNC.BB.001   用户登陆}
 客户端发送查询请求到服务器用户数据库，匹配该用户邮箱或学号和密码，匹配成功则返回成功登录的信息，并同步数据，进入登录后页面。匹配失败则返回失败信息，并显示账户不存在或密码错误。若为新用户，客户端发送新建请求到服务器数据库，检查是否为新用户，若可创建则返回允许创建信息，失败则返回无法创建新用户。
@@ -117,7 +168,6 @@ R.FUNC.BB.022   &   学习笔记共享   &   用户与其他用户共享学习�
 
 \section{功能结构设计}
 \subsection{整体结构}
-此处应当有一个图和对应的描述。系统如果像微内核那样，划分成核心模块和若干个子系统，此处应当有图示及说明，然后后续几个节应当描述这几个子系统。如果系统像宏内核，那应当说明有哪些紧密联系的模块，并在后续几个节内描述这些模块。
 
 \begin{longtable}{| c | c | p{7cm} |}
 % 首页表头
@@ -177,6 +227,48 @@ M.MODULE.BB.008   &   通知管理模块   &   通知管理功能结构   \\
 
 \end{longtable}
 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{figu1}
+\caption{日程管理功能结构}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{figure2}
+\caption{作业实验功能结构}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{figu3}
+\caption{成绩管理功能结构}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{figu4}
+\caption{讨论区功能结构}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{figu5}
+\caption{资源共享功能结构}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{figu6}
+\caption{学习笔记功能结构}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{figu7}
+\caption{用户管理功能结构}
+\end{figure}
 
 \subsection{用户与服务器功能结构}
 
