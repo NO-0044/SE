@@ -264,21 +264,91 @@
 [此处指的是不同的数据结构分配到哪些模块去实现。可按不同的端拆分此表]
 \begin{table}[htbp]
 \centering
-\caption{数据结构与程序代码的关系表} \label{tab:datastructure-module}
-\begin{tabular}{|c|c|c|c|}
+\caption{数据结构与程序代码的关系表1} \label{tab:datastructure-module}
+\begin{tabular}{|c|c|c|c|c|}
     \hline
-    · & 模块1 & 模块2 & 模块3 \\
+    · & 日程管理模块 & 作业实验模块 & 成绩管理模块 & 讨论区模块 \\
     \hline
-    结构1 & · & Y & · \\
+    command & Y & Y & Y & Y \\
     \hline
-    结构2 & · & Y & · \\
+    WorkQueryCommand & Y & Y & · & ·  \\
     \hline
-    结构3 & · & Y & · \\
+    WorkPublishCommand & Y & Y & · & · \\
     \hline
-    结构4 & Y & · & · \\
+    WorkAdjustCommand & Y & Y & · & · \\
     \hline
-    结构5 & · & · & Y \\
+    WorkCommitCommand & · & Y & · & · \\
+    \hline
+    WorkCheckCommand & · & Y & · & · \\
+    \hline
+    ScoreCommitCommand & · & · & Y & · \\
+    \hline
+    ScoreCommitCommand & · & · & Y & · \\
+    \hline
+    ScoreAdjustCommand & · & · & Y & · \\
+    \hline
+    ScheduleSynCommand & Y & · & · & · \\
+    \hline
+    NewDisCommand & · & · & · & Y \\
+    \hline
+    DisQueryCommand & · & · & · & Y \\
+    \hline
+    NewBlogCommand & · & · & · & Y \\
+    \hline
+    WorkInfo & · & Y & · & · \\
+    \hline
+    ScoreEntry & · & · & Y & · \\
+    \hline
+    ScoreList & · & · & Y & · \\
+    \hline
+    NewBlogCommand & · & · & · & Y \\
+    \hline
+    ScheduleInfo & Y & · & · & · \\
+    \hline
+    DisThesis & · & · & · & Y \\
+    \hline
+    ReplyInfo & · & · & · & Y \\
+    \hline
+    BlogInfo & · & · & · & Y \\
+    \hline
+    ScheduleInfo & Y & · & · & · \\
     \hline
 \end{tabular}
 \note{各项数据结构的实现与各个程序模块的分配关系}
 \end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{数据结构与程序代码的关系表2} \label{tab:datastructure-module}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    · &  资源共享模块 & 学习笔记模块 & 用户管理模块 & 通知管理模块  \\
+    \hline
+    command & Y & Y & Y & Y \\
+    \hline
+    LoginCommand & · & · & Y & · \\
+    \hline
+    WorkQueryCommand & · & · & · & Y \\
+    \hline
+    WorkPublishCommand & · & · & · & Y \\
+    \hline
+    WorkAdjustCommand & · & · & · & Y \\
+    \hline
+    ScoreAdjustCommand & · & · & · & Y \\
+    \hline
+    ResoureUploadCommand & Y & · & · & · \\
+    \hline
+    ResourceDownloadCommand & Y & · & · & · \\
+    \hline
+    NoteSynCommand & · & Y & · & · \\
+    \hline
+    NoticeInfo & · & · & · & Y \\
+    \hline
+    ResourceInfo & Y & · & · & · \\
+    \hline
+    NoteData & · & Y & · & · \\
+    \hline
+\end{tabular}
+\note{各项数据结构的实现与各个程序模块的分配关系}
+\end{table}
+
