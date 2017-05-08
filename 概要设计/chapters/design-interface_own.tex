@@ -1,9 +1,150 @@
 \chapter{接口设计}
 \section{外部接口}
-
-
-\subsection{支付宝接口}
-详细讲述不同的接口（查询状态、支付交易、获取回执等）
+\subsection{系统闹钟}
+\begin{description}
+  \item[调用接口]remind(time t)
+  \item[参数]time t
+\end{description}
+日程管理模块通过调用该接口调用熊闹钟模块进行提醒。
 
 \section{内部接口}
-内部模块/系统之间的交互的接口。
+\subsection{MODULE.BB.001 日程管理功能结构}
+  \subsubsection{日程查询功能结构}
+  \begin{description}
+    \item[调用接口]searchSchedule(ScheduleInfo info)
+    \item[参数]ScheduleInfo info
+  \end{description}
+  日程查询功能结构通过该接口接受传递来的部分日程信息，检索数据库将匹配的日程的完整信息传回。并且返回日程对应的唯一的索引。
+  \subsubsection{新建日程功能结构}
+  \begin{description}
+    \item[调用接口]addSchedule(ScheduleInfo info)
+    \item[参数]ScheduleInfo info
+  \end{description}
+  新建日程功能模块通过该接口传递来的日程信息，新建日程并存储。
+  \subsubsection{日程显示功能结构}
+  \begin{description}
+    \item[调用接口]showSchedule(ScheduleInfo[] info)
+    \item[参数]ScheduleInfo[] info
+  \end{description}
+  日程显示功能结构通过该接口传递过来的日程信息绘制Fragment展示结果。
+
+\subsection{MODULE.BB.002 作业实验功能结构}
+  \subsubsection{作业实验查询功能结构}
+  \begin{description}
+    \item[调用接口]searchWork(WorkInfo info)
+    \item[参数]WorkInfo info
+  \end{description}
+  作业实验查询功能结构通过该接口接受传递来的部分作业信息，检索数据库将匹配的相应任务的完整信息传回。同时返回任务对应的唯一的索引。
+  \subsubsection{新建作业功能结构}
+  \begin{description}
+    \item[调用接口]addWork(WorkInfo info)
+    \item[参数]WorkInfo info
+  \end{description}
+  新建作业功能模块通过该接口传递来的任务信息，新建任务并存储。
+  \subsubsection{修改与删除作业功能结构}
+  \begin{description}
+    \item[调用接口]deleteWork(String no)
+    \item[参数]String no
+  \end{description}
+  修改与删除作业功能结构通过该接口删除指定的任务。
+  \begin{description}
+    \item[调用接口]alterWork(String no,WorkInfo info)
+    \item[参数]String no,WorkInfo info
+  \end{description}
+  修改与删除作业功能结构通过该接口将指定的任务按照所给信息进行修改。
+  \subsubsection{作业实验提交功能结构}
+  \begin{description}
+    \item[调用接口]uploadWork(String no, Data data)
+    \item[参数]String no, Data data
+  \end{description}
+  作业实验提交模块通过调用该接口提交指定的任务，返回是否成功。
+
+\subsection{MODULE.BB.003 成绩管理功能结构}
+  \subsubsection{成绩查询功能结构}
+  \begin{description}
+    \item[调用接口]searchScore(String userid,String test)
+    \item[参数]String userid,String test
+  \end{description}
+  成绩查询功能结构通过该接口传递的指定考试和用户的信息检索并将相应的成绩返回。
+  \subsubsection{成绩导入功能结构}
+  \begin{description}
+    \item[调用接口]importScore(data data,Type type)
+    \item[参数]data data,Type type
+    \item[类型定义]
+    \begin{lstlisting}[language=C]
+      enum Type{
+        txt=1,excel=2,String=3
+      }
+    \end{lstlisting}
+  \end{description}
+  成绩导入功能模块通过该接口传递来的数据和数据类型进行解析并且将
+  \subsubsection{成绩调整功能结构}
+  \begin{description}
+    \item[调用接口]adjustScore(String test,ScoreEntry score)
+    \item[参数]String test,ScoreEntry score
+  \end{description}
+  成绩调整功能结构通过该接口传递的指定考试和成绩信息并且进行修改。
+
+\subsection{MODULE.BB.004 讨论区功能结构}
+  \subsubsection{发布主题功能结构}
+  \begin{description}
+    \item[调用接口]publishThesis(DisThesis thesis)
+    \item[参数]DisThesis thesis
+  \end{description}
+  发布主题功能结构通过该接口传递的数据构建新的主题并且进行存储和发布。
+  \subsubsection{讨论区查询功能结构}
+  \begin{description}
+    \item[调用接口]searchDis(String query)
+    \item[参数]String query
+  \end{description}
+  讨论区查询功能结构通过该接口对数据库进行检索并且返回结果。
+  \subsubsection{修改与删除主题功能结构}
+  \begin{description}
+    \item[调用接口]deleteThesis(String no)
+    \item[参数]String no
+  \end{description}
+  修改与删除主题功能结构通过该接口删除指定的主题。
+  \begin{description}
+    \item[调用接口]alterThesis(String no,DisThesis info)
+    \item[参数]String no,DisThesis info
+  \end{description}
+  修改与删除主题功能结构通过该接口将指定的主题按照所给信息进行修改。
+
+\subsection{MODULE.BB.005 资源共享功能结构}
+  \subsubsection{资源查询功能结构}
+  \begin{description}
+    \item[调用接口]searchResourse(String keywords)
+    \item[参数]String keywords
+  \end{description}
+  资源查询功能结构模块通过该接口传来的关键词检索后台资源数据库并且返回检索结果。
+  \subsubsection{资源上传功能结构}
+  \begin{description}
+    \item[调用接口]uploadResource(ResourceInfo info,Data data)
+    \item[参数]ResourceInfo info,Data data
+  \end{description}
+  资源上传功能模块通过该接口将相应的资源数据和资源信息上传。
+  \subsubsection{资源下载功能结构}
+  \begin{description}
+    \item[调用接口]downloadResource(String no,String dest)
+    \item[参数]String no,String dest
+  \end{description}
+  资源下载模块通过该接口将指定的资源下载至指定地点。
+
+\subsection{MODULE.BB.006 学习笔记功能结构}
+  \subsubsection{笔记上传功能结构}
+  \begin{description}
+    \item[调用接口]uploadNote()
+    \item[参数]无参数
+  \end{description}
+  笔记上传模块通过该接口调用将本地笔记信息同步至远端。
+  \subsubsection{笔记修改与删除功能结构}
+  \begin{description}
+    \item[调用接口]deleteNote(String no)
+    \item[参数]String no
+  \end{description}
+  笔记修改与删除功能结构通过该接口将指定的笔记删除。
+  \begin{description}
+    \item[调用接口]alterNote(String no，NoteData data)
+    \item[参数]String no，NoteData data
+  \end{description}
+  笔记修改与删除功能结构通过该接口修改指定的笔记。
