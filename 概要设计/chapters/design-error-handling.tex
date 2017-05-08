@@ -1,6 +1,173 @@
 \chapter{出错处理设计}
 \section{数据库出错处理}
-多重备份时，应采取何种策略，先利用哪一份备份；系统是否暂停服务等。
+\subsection{数据库连接出错}
+通知管理员，让其检测网络
+
+\subsection{数据库本身出错}
+通知管理员
+
+多重备份时，应采用出错前最新的备份。在恢复前，系统暂停服务。
+
+
 
 \section{某模块失效处理}
-是否整个系统暂停服务，还是维持最小服务状态、如何尽快恢复服务还是删库跑路等。
+
+当系统检测到某个模块失效时，应终止该模块的服务，维持最小服务状态，系统向管理员发送通知，管理员尽快恢复服务。
+
+\section{出错信息输出与处理}
+\subsection{用户登陆}
+\subsubsection{账号密码错误}
+输出： 用户账号或密码错误
+
+处理： 输出错误信息，登陆失败
+\subsubsection{登陆超时}
+输出： 登陆超时，请检查网络设置
+
+处理： 输出错误信息，登陆失败
+
+\subsection{作业/实验查询}
+\subsubsection{查询超时}
+输出： 查询超时，请检查网络连接
+
+处理： 输出错误信息，查询失败
+
+\subsection{作业/实验/通知发布}
+\subsubsection{权限不对}
+输出： 您没有该权限。
+\subsubsection{上传超时}
+输出： 上传失败，请检查网络连接
+
+处理： 输出错误信息，查询失败
+
+\subsection{作业/实验/通知修改删除}
+\subsubsection{权限不对}
+输出： 您没有该权限。
+\subsubsection{超时}
+输出： 失败，请检查网络连接
+
+处理： 输出错误信息，更改失败
+
+\subsection{作业/实验提交}
+\subsubsection{已过截至时间}
+输出： 提交时间已过，提交失败。
+\subsubsection{上传超时}
+输出： 连接超时，请检查网络设置
+
+处理： 输出错误信息，提交失败
+
+\subsection{作业/实验查看与批改}
+\subsubsection{权限不对}
+输出： 您没有该权限。
+\subsubsection{超时}
+输出： 失败，请检查网络连接
+
+处理： 输出错误信息，查看失败
+
+\subsection{成绩录入}
+\subsubsection{权限不对}
+输出： 您没有该权限。
+\subsubsection{输入学号错误}
+输出： 没有该同学，请检查学生名单
+\subsubsection{输入成绩错误}
+输出： 输入成绩不符合规定，请重新输入
+\subsubsection{超时}
+输出： 连接超时，请检查网络连接
+
+处理： 输出错误信息，录入失败
+
+\subsection{成绩查询}
+\subsubsection{权限不对}
+输出： 您没有查询该学生成绩的权限
+\subsubsection{超时}
+输出： 连接超时，请检查网络连接
+
+处理： 输出错误信息，查询失败
+
+
+\subsection{成绩统计和调整}
+\subsubsection{权限不对}
+输出： 您没有调整成绩的权限
+\subsubsection{调整出错}
+输出： 您调整后的成绩不符合成绩格式，返回不符合的数据。
+\subsubsection{超时}
+输出： 连接超时，请检查网络连接
+
+处理： 输出错误信息，调整失败
+
+\subsection{资源上传}
+\subsubsection{权限不对}
+输出： 没有该权限，请联系管理员
+\subsubsection{上传文件过大}
+输出： 上传文件过大
+\subsubsection{超时}
+输出： 上传失败，请检查网络连接
+
+处理： 输出错误信息，上传失败
+
+\subsection{资源下载与浏览}
+\subsubsection{权限不对}
+输出： 没有该权限，请联系管理员
+\subsubsection{超时}
+输出： 连接，请检查网络连接
+
+处理： 输出错误信息，下载失败
+
+\subsection{新建日程}
+\subsubsection{信息不对}
+输出： 输入信息有误
+\subsubsection{超时}
+输出： 连接，请检查网络连接
+
+处理： 输出错误信息，下载失败
+
+\subsection{日程显示与提醒}
+\subsubsection{超时}
+输出： 连接，请检查网络连接
+
+处理： 输出错误信息，更新失败，显示本地日程
+
+\subsection{讨论区讨论}
+\subsubsection{权限不对}
+输出： 没有该权限，请联系管理员
+\subsubsection{内容不合法}
+输出： 内容不合法
+\subsubsection{超时}
+输出： 连接，请检查网络连接
+
+处理： 输出错误信息，评论失败
+
+\subsection{新建博文}
+\subsubsection{内容不合法}
+输出： 内容不合法
+\subsubsection{超时}
+输出： 连接，请检查网络连接
+
+处理： 输出错误信息，上传失败，保存在本地
+
+\subsection{课程考试排布}
+\subsubsection{时间冲突}
+输出： XX课与YY课时间冲突，请重新安排
+\subsubsection{超时}
+输出： 连接，请检查网络连接
+
+处理： 输出错误信息，排布失败
+
+\subsection{学习笔记添加修改}
+\subsubsection{输入非法字符}
+输出：出入非法
+\subsubsection{输入字符过多}
+输出： 超过字符数量限制
+\subsubsection{插入图片失败}
+输出： 插入图片失败
+\subsubsection{超时}
+输出： 连接，请检查网络连接
+
+处理： 输出错误信息，如上传超时，暂时将数据保存在本地
+
+\subsection{学习笔记导出}
+\subsubsection{超时}
+输出： 连接，请检查网络连接
+
+\subsection{学习笔记共享}
+\subsubsection{超时}
+输出： 连接，请检查网络连接
