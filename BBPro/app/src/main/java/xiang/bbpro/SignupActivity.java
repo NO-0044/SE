@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import xiang.bbpro.UserControl.User;
 
 public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
@@ -73,15 +74,12 @@ public class SignupActivity extends AppCompatActivity {
         String reEnterPassword = _reEnterPasswordText.getText().toString();
 
         // TODO: Implement your own signup logic here.
-        SQLiteDatabase db = openOrCreateDatabase("tourism.db", Context.MODE_PRIVATE,null);
-        db.execSQL("create table if not exists user(email varchar(100) primary key,name varchar(50),password varchar(20))");
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
                         // On complete call either onSignupSuccess or onSignupFailed
                         // depending on success
-                        SQLiteDatabase db = openOrCreateDatabase("tourism.db", Context.MODE_PRIVATE,null);
-                        db.execSQL("insert into user(email,name,password) values(?,?,?)",new Object[]{email,name,password});
+                        User.add(name,email,password);
                         onSignupSuccess();
                         // onSignupFailed();
                         progressDialog.dismiss();

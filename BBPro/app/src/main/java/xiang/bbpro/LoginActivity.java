@@ -18,7 +18,7 @@ import com.facebook.stetho.Stetho;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import xiang.tourism.QUERY.QueryActivity;
+import xiang.bbpro.UserControl.User;
 
 /**
  * Created by xiang on 17-5-15.
@@ -84,12 +84,8 @@ public class LoginActivity extends AppCompatActivity {
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
-                        SQLiteDatabase db = openOrCreateDatabase("tourism.db", Context.MODE_PRIVATE,null);
-                        Cursor c;
-                        c = db.rawQuery("select password from user where email = ?",new String[]{email});
-                        c.moveToFirst();
-                        if (c.getString(0).equals(password))
-                            onLoginSuccess(email);
+                        if (User.Check(email,password))
+                           onLoginSuccess(email);
                         else onLoginFailed();
                         progressDialog.dismiss();
                     }
@@ -117,10 +113,6 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess(String email) {
         _loginButton.setEnabled(true);
-        Intent i = new Intent(LoginActivity.this,QueryActivity.class);
-        i.putExtra("email",email);
-        startActivity(i);
-        finish();
     }
 
     public void onLoginFailed() {
