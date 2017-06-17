@@ -18,6 +18,7 @@ import com.facebook.stetho.Stetho;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import xiang.bbpro.Notify.TNotifyActivity;
 import xiang.bbpro.UserControl.User;
 
 /**
@@ -71,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
         _loginButton.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
-                R.style.AppTheme);
+                R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
@@ -113,6 +114,10 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess(String email) {
         _loginButton.setEnabled(true);
+        Intent i = new Intent(LoginActivity.this,TNotifyActivity.class);
+        i.putExtra("email",email);
+        startActivity(i);
+        finish();
     }
 
     public void onLoginFailed() {
