@@ -12,4 +12,13 @@ public class NotifyCommunication {
         List<Notify> l = new ArrayList<>();
         return l;
     }
+    public static void add(Notify n){
+
+    }
+    public static void modify(Notify n){
+
+    }
+    public static void remove(Notify n){
+
+    }
 }

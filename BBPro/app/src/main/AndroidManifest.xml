@@ -21,6 +21,12 @@
         <activity
             android:name=".Notify.TNotifyActivity"
             android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Notify.NotifyNewActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Notify.NotifyDetailActivity"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

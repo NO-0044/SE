@@ -14,7 +14,7 @@ android:fitsSystemWindows="true">
 
     <include
         android:id="@+id/toolbar_container"
-        layout="@layout/layout_toolbar" />
+        layout="@layout/layout_notifytoolbar" />
 
     <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
         xmlns:android="http://schemas.android.com/apk/res/android"
